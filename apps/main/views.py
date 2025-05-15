@@ -29,7 +29,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir) 
 import os
 from django.conf import settings
-client = OpenAI(api_key="your-openai-api-key")
+client = OpenAI(api_key="OPENAI_API_KEY")
 
 # Load once globally
 MODEL_PATH = os.path.join(settings.BASE_DIR, 'apps','main', 'model_data', 'multioutput_fashion_model.h5')
