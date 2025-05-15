@@ -1,0 +1,301 @@
+age_group,style_preference,color_preference,shopping_frequency,recent_purchase,spending_category,shopping_occasion,interest,fit_preference,fabric_preference,season_shopping,gender,subcategory,article_type
+35–44,Professional,Blue,Monthly,Sneakers,Outerwear,Events/Parties,Eco-friendly,Oversized,Blended,Winter,Unisex,Footwear,Casual Sneakers
+45+,Professional,Grey,Rarely,Jeans,Accessories,Travel,Designer,Slim,Linen,Summer,Unisex,Accessories,Jeans
+25–34,Trendy,Red,Weekly,Cap,Tops,Work,Value-for-money,Slim,Polyester,Summer,Women,Accessories,Cap
+45+,Professional,Grey,Weekly,Shirt,Accessories,Work,Eco-friendly,Regular,Cotton,Summer,Unisex,Tops,Formal Shirt
+45+,Casual,Blue,Weekly,Hoodie,Bottoms,Work,Trendy,Regular,Wool,All-season,Men,Tops,Hoodie
+18–24,Sporty,Blue,Rarely,Shirt,Footwear,Sports/Fitness,Trendy,Slim,Cotton,Summer,Men,Footwear,Shirt
+25–34,Trendy,Grey,Weekly,Shirt,Bottoms,Casual Outings,Comfort,Regular,Polyester,All-season,Unisex,Tops,Shirt
+25–34,Sporty,Black,Rarely,Shirt,Tops,Events/Parties,Value-for-money,Slim,Blended,All-season,Men,Tops,Shirt
+25–34,Professional,White,Monthly,Cap,Outerwear,Travel,Eco-friendly,Oversized,Blended,Winter,Unisex,Accessories,Cap
+45+,Professional,Bright,Every 2–3 months,Shirt,Accessories,Travel,Trendy,Regular,Blended,Winter,Unisex,Tops,Shirt
+35–44,Trendy,Black,Weekly,Jacket,Footwear,Sports/Fitness,Value-for-money,Slim,Wool,Winter,Unisex,Footwear,Jacket
+25–34,Casual,Black,Weekly,Cap,Accessories,Work,Comfort,Regular,Linen,Winter,Men,Accessories,Cap
+45+,Classic,Neutral,Monthly,Jacket,Tops,Sports/Fitness,Designer,Slim,Linen,Winter,Unisex,Outerwear,Jacket
+18–24,Trendy,Bright,Every 2–3 months,Cap,Accessories,Casual Outings,Value-for-money,Slim,Cotton,All-season,Women,Tops,Cap
+35–44,Classic,Bright,Rarely,Jeans,Footwear,Casual Outings,Value-for-money,Regular,Wool,All-season,Unisex,Footwear,Jeans
+18–24,Classic,Black,Every 2–3 months,T-shirt,Tops,Events/Parties,Designer,Oversized,Blended,Summer,Unisex,Tops,Plain Cotton T-shirt
+35–44,Casual,Red,Monthly,Sneakers,Accessories,Events/Parties,Value-for-money,Slim,Blended,All-season,Unisex,Footwear,Casual Sneakers
+45+,Classic,Neutral,Monthly,Shirt,Outerwear,Casual Outings,Comfort,Slim,Polyester,All-season,Unisex,Tops,Shirt
+Under 18,Classic,Neutral,Every 2–3 months,Jeans,Tops,Casual Outings,Comfort,Slim,Polyester,Winter,Unisex,Tops,Jeans
+35–44,Casual,Blue,Rarely,T-shirt,Tops,Casual Outings,Designer,Oversized,Blended,All-season,Unisex,Tops,Plain Cotton T-shirt
+18–24,Classic,Bright,Rarely,Sneakers,Outerwear,Sports/Fitness,Eco-friendly,Oversized,Blended,Winter,Unisex,Footwear,Running Sneakers
+45+,Classic,Black,Weekly,Watch,Bottoms,Casual Outings,Trendy,Regular,Wool,Summer,Unisex,Tops,Analog Watch
+35–44,Classic,Blue,Rarely,Hoodie,Footwear,Travel,Eco-friendly,Oversized,Linen,Summer,Unisex,Footwear,Hoodie
+Under 18,Trendy,Grey,Every 2–3 months,Jacket,Bottoms,Work,Value-for-money,Regular,Polyester,All-season,Unisex,Outerwear,Jacket
+Under 18,Trendy,White,Monthly,Watch,Accessories,Casual Outings,Trendy,Regular,Linen,Summer,Unisex,Tops,Smartwatch
+25–34,Trendy,Neutral,Weekly,Cap,Outerwear,Work,Designer,Oversized,Wool,All-season,Unisex,Accessories,Cap
+25–34,Casual,Grey,Weekly,Sneakers,Bottoms,Sports/Fitness,Designer,Regular,Blended,Summer,Unisex,Footwear,Running Sneakers
+18–24,Professional,Grey,Monthly,Watch,Tops,Work,Trendy,Oversized,Linen,Winter,Unisex,Accessories,Formal Shirt
+35–44,Classic,Red,Rarely,Hoodie,Accessories,Sports/Fitness,Comfort,Regular,Blended,Winter,Unisex,Tops,Hoodie
+35–44,Classic,White,Monthly,Jeans,Accessories,Travel,Trendy,Oversized,Blended,Winter,Unisex,Accessories,Jeans
+25–34,Casual,Grey,Rarely,Sneakers,Bottoms,Sports/Fitness,Value-for-money,Oversized,Cotton,Winter,Unisex,Footwear,Running Sneakers
+35–44,Classic,Grey,Monthly,Watch,Bottoms,Sports/Fitness,Comfort,Regular,Linen,All-season,Unisex,Bottoms,Analog Watch
+35–44,Trendy,White,Every 2–3 months,Jacket,Outerwear,Events/Parties,Designer,Slim,Linen,Summer,Unisex,Outerwear,Jacket
+Under 18,Professional,White,Rarely,Jacket,Footwear,Casual Outings,Trendy,Regular,Blended,All-season,Unisex,Footwear,Jacket
+25–34,Sporty,Grey,Every 2–3 months,T-shirt,Bottoms,Casual Outings,Eco-friendly,Oversized,Wool,Winter,Unisex,Tops,Plain Cotton T-shirt
+45+,Classic,White,Weekly,Watch,Bottoms,Travel,Eco-friendly,Slim,Cotton,All-season,Unisex,Accessories,Analog Watch
+25–34,Trendy,Grey,Monthly,Shirt,Tops,Travel,Value-for-money,Regular,Blended,Summer,Unisex,Tops,Shirt
+45+,Sporty,Grey,Weekly,Watch,Accessories,Casual Outings,Eco-friendly,Regular,Polyester,All-season,Unisex,Tops,Smartwatch
+Under 18,Professional,Red,Weekly,Jeans,Footwear,Events/Parties,Trendy,Regular,Polyester,Summer,Unisex,Footwear,Jeans
+18–24,Sporty,Black,Weekly,Sneakers,Tops,Casual Outings,Trendy,Slim,Cotton,All-season,Men,Footwear,Casual Sneakers
+35–44,Trendy,Grey,Weekly,Sneakers,Outerwear,Events/Parties,Eco-friendly,Oversized,Wool,Summer,Unisex,Footwear,Casual Sneakers
+Under 18,Sporty,Blue,Monthly,Jeans,Outerwear,Travel,Trendy,Regular,Blended,Summer,Men,Tops,Jeans
+35–44,Casual,Neutral,Weekly,Watch,Bottoms,Work,Value-for-money,Regular,Linen,Winter,Unisex,Accessories,Smartwatch
+18–24,Sporty,Bright,Monthly,Jeans,Bottoms,Travel,Comfort,Regular,Cotton,Summer,Unisex,Bottoms,Jeans
+18–24,Classic,Black,Monthly,Hoodie,Outerwear,Travel,Value-for-money,Regular,Wool,Winter,Unisex,Tops,Hoodie
+Under 18,Classic,Black,Every 2–3 months,Cap,Bottoms,Sports/Fitness,Value-for-money,Regular,Linen,Winter,Unisex,Accessories,Cap
+18–24,Casual,Black,Rarely,Jeans,Footwear,Sports/Fitness,Trendy,Oversized,Polyester,Winter,Unisex,Footwear,Jeans
+45+,Trendy,Red,Rarely,Jacket,Bottoms,Sports/Fitness,Comfort,Oversized,Polyester,All-season,Women,Bottoms,Jacket
+18–24,Classic,Grey,Monthly,Jeans,Accessories,Sports/Fitness,Trendy,Regular,Linen,All-season,Unisex,Accessories,Jeans
+35–44,Professional,Red,Every 2–3 months,Sneakers,Bottoms,Events/Parties,Designer,Slim,Cotton,All-season,Women,Footwear,Casual Sneakers
+35–44,Classic,Grey,Monthly,Jacket,Tops,Casual Outings,Trendy,Oversized,Polyester,All-season,Unisex,Tops,Jacket
+35–44,Classic,Red,Monthly,Sneakers,Footwear,Work,Trendy,Slim,Blended,Summer,Unisex,Footwear,Casual Sneakers
+35–44,Trendy,Red,Monthly,T-shirt,Tops,Travel,Trendy,Oversized,Linen,Summer,Women,Tops,Graphic T-shirt
+45+,Sporty,Neutral,Every 2–3 months,Shirt,Tops,Events/Parties,Comfort,Regular,Linen,All-season,Unisex,Tops,Shirt
+25–34,Classic,Blue,Rarely,Sneakers,Accessories,Work,Trendy,Oversized,Polyester,Summer,Unisex,Footwear,Casual Sneakers
+Under 18,Casual,Red,Every 2–3 months,Jacket,Footwear,Events/Parties,Comfort,Regular,Cotton,Summer,Unisex,Footwear,Jacket
+35–44,Sporty,Neutral,Weekly,T-shirt,Footwear,Events/Parties,Eco-friendly,Oversized,Blended,Winter,Unisex,Footwear,Plain Cotton T-shirt
+18–24,Professional,White,Every 2–3 months,Sneakers,Footwear,Travel,Designer,Regular,Cotton,Winter,Unisex,Footwear,Casual Sneakers
+35–44,Trendy,Blue,Every 2–3 months,Hoodie,Footwear,Casual Outings,Comfort,Regular,Wool,Winter,Unisex,Footwear,Hoodie
+18–24,Professional,Red,Every 2–3 months,Jeans,Footwear,Sports/Fitness,Eco-friendly,Regular,Wool,Winter,Unisex,Footwear,Jeans
+18–24,Sporty,Bright,Every 2–3 months,Shirt,Accessories,Casual Outings,Comfort,Regular,Polyester,Summer,Unisex,Tops,Shirt
+35–44,Sporty,Black,Rarely,Sneakers,Bottoms,Travel,Comfort,Slim,Polyester,All-season,Men,Footwear,Casual Sneakers
+45+,Sporty,White,Weekly,T-shirt,Tops,Travel,Designer,Regular,Polyester,Summer,Unisex,Tops,Plain Cotton T-shirt
+18–24,Professional,White,Rarely,Hoodie,Footwear,Travel,Value-for-money,Slim,Wool,Summer,Unisex,Footwear,Hoodie
+18–24,Sporty,Neutral,Rarely,Watch,Bottoms,Work,Value-for-money,Slim,Cotton,Summer,Unisex,Accessories,Smartwatch
+35–44,Professional,White,Every 2–3 months,T-shirt,Bottoms,Casual Outings,Comfort,Regular,Cotton,Winter,Unisex,Tops,Plain Cotton T-shirt
+18–24,Sporty,Blue,Monthly,Jeans,Tops,Casual Outings,Trendy,Slim,Polyester,Winter,Men,Tops,Jeans
+18–24,Casual,Red,Monthly,T-shirt,Accessories,Events/Parties,Eco-friendly,Oversized,Blended,Winter,Unisex,Tops,Plain Cotton T-shirt
+35–44,Sporty,Red,Rarely,Hoodie,Outerwear,Events/Parties,Trendy,Regular,Cotton,All-season,Unisex,Tops,Hoodie
+35–44,Professional,Bright,Rarely,T-shirt,Outerwear,Events/Parties,Trendy,Slim,Wool,Summer,Women,Tops,Plain Cotton T-shirt
+Under 18,Classic,Black,Every 2–3 months,Hoodie,Bottoms,Travel,Comfort,Regular,Linen,All-season,Unisex,Tops,Hoodie
+45+,Sporty,Neutral,Rarely,Sneakers,Tops,Casual Outings,Comfort,Regular,Linen,Winter,Unisex,Footwear,Casual Sneakers
+45+,Classic,Black,Every 2–3 months,Cap,Outerwear,Travel,Comfort,Regular,Linen,All-season,Unisex,Accessories,Cap
+18–24,Casual,White,Monthly,Hoodie,Bottoms,Work,Comfort,Slim,Blended,Summer,Unisex,Tops,Hoodie
+45+,Trendy,Bright,Monthly,Hoodie,Accessories,Events/Parties,Value-for-money,Oversized,Polyester,Summer,Women,Tops,Hoodie
+18–24,Casual,Black,Weekly,Shirt,Outerwear,Travel,Comfort,Oversized,Wool,Winter,Unisex,Tops,Shirt
+Under 18,Sporty,Blue,Monthly,Hoodie,Bottoms,Travel,Value-for-money,Slim,Blended,Winter,Men,Tops,Hoodie
+35–44,Classic,Red,Rarely,Hoodie,Bottoms,Work,Value-for-money,Regular,Wool,All-season,Unisex,Tops,Hoodie
+35–44,Classic,White,Monthly,Watch,Footwear,Sports/Fitness,Comfort,Slim,Wool,Winter,Unisex,Footwear,Analog Watch
+35–44,Professional,Bright,Every 2–3 months,Cap,Accessories,Casual Outings,Designer,Slim,Polyester,Winter,Women,Tops,Cap
+45+,Classic,Black,Monthly,Sneakers,Footwear,Sports/Fitness,Eco-friendly,Slim,Linen,Summer,Unisex,Footwear,Running Sneakers
+Under 18,Professional,Neutral,Weekly,Jeans,Tops,Events/Parties,Trendy,Regular,Polyester,Winter,Unisex,Outerwear,Jeans
+45+,Trendy,Blue,Monthly,Shirt,Footwear,Travel,Value-for-money,Slim,Blended,Winter,Unisex,Footwear,Shirt
+45+,Sporty,Blue,Every 2–3 months,Watch,Footwear,Work,Eco-friendly,Regular,Blended,Summer,Men,Footwear,Smartwatch
+Under 18,Professional,Black,Every 2–3 months,Jacket,Outerwear,Work,Designer,Slim,Blended,Summer,Unisex,Outerwear,Formal Shirt
+Under 18,Trendy,Red,Rarely,Cap,Bottoms,Casual Outings,Trendy,Oversized,Polyester,All-season,Women,Tops,Cap
+Under 18,Classic,Black,Monthly,Sneakers,Accessories,Sports/Fitness,Trendy,Slim,Wool,Winter,Unisex,Footwear,Running Sneakers
+Under 18,Classic,White,Every 2–3 months,Sneakers,Footwear,Casual Outings,Value-for-money,Slim,Wool,Summer,Unisex,Footwear,Casual Sneakers
+35–44,Trendy,Black,Weekly,Jacket,Accessories,Travel,Comfort,Oversized,Cotton,All-season,Unisex,Accessories,Jacket
+25–34,Classic,Blue,Rarely,Jeans,Footwear,Casual Outings,Designer,Regular,Blended,All-season,Unisex,Footwear,Jeans
+25–34,Trendy,Bright,Weekly,Hoodie,Tops,Work,Value-for-money,Regular,Wool,Winter,Unisex,Tops,Hoodie
+Under 18,Professional,Black,Monthly,Watch,Footwear,Work,Designer,Slim,Cotton,Winter,Unisex,Footwear,Formal Shirt
+25–34,Professional,Red,Monthly,T-shirt,Outerwear,Events/Parties,Comfort,Oversized,Wool,All-season,Women,Tops,Plain Cotton T-shirt
+25–34,Trendy,Bright,Monthly,Shirt,Bottoms,Events/Parties,Comfort,Regular,Blended,Summer,Unisex,Tops,Shirt
+Under 18,Professional,Neutral,Rarely,T-shirt,Tops,Travel,Value-for-money,Slim,Linen,All-season,Unisex,Tops,Plain Cotton T-shirt
+25–34,Professional,Grey,Every 2–3 months,Jacket,Footwear,Sports/Fitness,Comfort,Oversized,Blended,Winter,Unisex,Footwear,Jacket
+45+,Professional,Black,Rarely,Sneakers,Accessories,Casual Outings,Eco-friendly,Regular,Polyester,Summer,Unisex,Footwear,Casual Sneakers
+18–24,Casual,Red,Weekly,Jeans,Tops,Travel,Trendy,Regular,Wool,Summer,Unisex,Tops,Jeans
+18–24,Sporty,Bright,Rarely,Sneakers,Tops,Events/Parties,Value-for-money,Oversized,Wool,All-season,Unisex,Footwear,Casual Sneakers
+Under 18,Classic,Red,Weekly,Shirt,Footwear,Casual Outings,Designer,Oversized,Polyester,Winter,Unisex,Footwear,Shirt
+35–44,Casual,Neutral,Rarely,Sneakers,Tops,Events/Parties,Eco-friendly,Oversized,Polyester,All-season,Unisex,Footwear,Casual Sneakers
+Under 18,Professional,Blue,Every 2–3 months,Sneakers,Accessories,Casual Outings,Value-for-money,Oversized,Linen,All-season,Unisex,Footwear,Casual Sneakers
+35–44,Trendy,Red,Weekly,Shirt,Tops,Sports/Fitness,Comfort,Slim,Wool,All-season,Women,Tops,Shirt
+18–24,Professional,Bright,Monthly,Watch,Accessories,Travel,Comfort,Oversized,Wool,Summer,Women,Accessories,Analog Watch
+Under 18,Sporty,Red,Monthly,Watch,Footwear,Casual Outings,Comfort,Regular,Linen,Summer,Unisex,Footwear,Smartwatch
+45+,Professional,Red,Rarely,Shirt,Bottoms,Work,Comfort,Regular,Cotton,Winter,Unisex,Tops,Formal Shirt
+25–34,Trendy,Red,Monthly,Jeans,Tops,Work,Designer,Slim,Linen,Winter,Women,Outerwear,Jeans
+35–44,Sporty,White,Weekly,Jacket,Bottoms,Casual Outings,Eco-friendly,Regular,Blended,All-season,Unisex,Tops,Jacket
+25–34,Professional,White,Monthly,Cap,Accessories,Casual Outings,Trendy,Regular,Wool,All-season,Unisex,Tops,Cap
+25–34,Sporty,Blue,Every 2–3 months,Sneakers,Tops,Casual Outings,Designer,Oversized,Polyester,All-season,Unisex,Footwear,Casual Sneakers
+Under 18,Classic,Black,Every 2–3 months,Jeans,Outerwear,Work,Designer,Regular,Blended,Winter,Unisex,Outerwear,Jeans
+25–34,Classic,Red,Rarely,Sneakers,Bottoms,Work,Trendy,Slim,Wool,Summer,Unisex,Footwear,Casual Sneakers
+45+,Professional,Neutral,Weekly,Cap,Tops,Casual Outings,Trendy,Oversized,Linen,Summer,Unisex,Tops,Cap
+25–34,Sporty,Black,Every 2–3 months,Jacket,Bottoms,Events/Parties,Comfort,Oversized,Blended,All-season,Unisex,Bottoms,Jacket
+Under 18,Trendy,Neutral,Every 2–3 months,Watch,Tops,Events/Parties,Designer,Slim,Wool,All-season,Unisex,Accessories,Smartwatch
+45+,Professional,Black,Weekly,Jeans,Footwear,Sports/Fitness,Value-for-money,Oversized,Cotton,All-season,Unisex,Footwear,Jeans
+18–24,Classic,Blue,Monthly,Hoodie,Bottoms,Travel,Trendy,Oversized,Cotton,All-season,Unisex,Tops,Hoodie
+25–34,Classic,Red,Monthly,Hoodie,Outerwear,Events/Parties,Trendy,Slim,Polyester,Winter,Unisex,Tops,Hoodie
+Under 18,Professional,Red,Rarely,Cap,Outerwear,Work,Eco-friendly,Oversized,Wool,Summer,Women,Accessories,Formal Shirt
+18–24,Sporty,Grey,Monthly,Hoodie,Accessories,Events/Parties,Value-for-money,Slim,Cotton,All-season,Unisex,Tops,Hoodie
+18–24,Classic,Neutral,Weekly,Watch,Tops,Sports/Fitness,Value-for-money,Slim,Linen,Winter,Unisex,Accessories,Analog Watch
+35–44,Sporty,Black,Every 2–3 months,Cap,Bottoms,Sports/Fitness,Trendy,Regular,Wool,All-season,Men,Accessories,Cap
+45+,Classic,Black,Monthly,Watch,Accessories,Travel,Comfort,Regular,Linen,All-season,Unisex,Accessories,Analog Watch
+25–34,Classic,White,Rarely,Jacket,Bottoms,Events/Parties,Eco-friendly,Oversized,Linen,Summer,Unisex,Outerwear,Jacket
+Under 18,Casual,Grey,Monthly,Sneakers,Tops,Work,Value-for-money,Oversized,Cotton,All-season,Unisex,Footwear,Casual Sneakers
+35–44,Classic,Bright,Weekly,Jacket,Outerwear,Work,Trendy,Slim,Wool,Summer,Unisex,Outerwear,Jacket
+45+,Trendy,Bright,Rarely,Jacket,Footwear,Casual Outings,Value-for-money,Oversized,Blended,Summer,Women,Footwear,Jacket
+35–44,Professional,White,Monthly,Watch,Outerwear,Work,Eco-friendly,Slim,Cotton,Summer,Unisex,Accessories,Formal Shirt
+45+,Professional,White,Rarely,Cap,Accessories,Travel,Eco-friendly,Slim,Cotton,Winter,Unisex,Accessories,Cap
+45+,Sporty,White,Weekly,Cap,Footwear,Travel,Designer,Oversized,Wool,Winter,Unisex,Footwear,Cap
+25–34,Classic,Neutral,Every 2–3 months,Hoodie,Accessories,Work,Trendy,Slim,Wool,Summer,Unisex,Tops,Hoodie
+45+,Trendy,Neutral,Weekly,T-shirt,Tops,Work,Eco-friendly,Regular,Linen,All-season,Unisex,Tops,Graphic T-shirt
+35–44,Sporty,Blue,Weekly,Sneakers,Footwear,Casual Outings,Designer,Oversized,Wool,Summer,Unisex,Footwear,Casual Sneakers
+45+,Casual,Blue,Weekly,Watch,Accessories,Work,Designer,Regular,Linen,All-season,Men,Accessories,Smartwatch
+25–34,Sporty,White,Weekly,Hoodie,Tops,Casual Outings,Value-for-money,Oversized,Cotton,Summer,Unisex,Tops,Hoodie
+25–34,Sporty,Grey,Every 2–3 months,Jeans,Outerwear,Casual Outings,Value-for-money,Slim,Polyester,All-season,Unisex,Tops,Jeans
+35–44,Classic,Black,Every 2–3 months,T-shirt,Tops,Work,Designer,Oversized,Blended,Winter,Unisex,Tops,Plain Cotton T-shirt
+18–24,Casual,Neutral,Rarely,T-shirt,Bottoms,Sports/Fitness,Value-for-money,Regular,Cotton,All-season,Unisex,Tops,Plain Cotton T-shirt
+18–24,Sporty,Grey,Monthly,Watch,Tops,Sports/Fitness,Eco-friendly,Slim,Wool,Summer,Unisex,Accessories,Smartwatch
+45+,Trendy,Red,Every 2–3 months,Shirt,Tops,Casual Outings,Comfort,Oversized,Blended,Winter,Women,Tops,Shirt
+Under 18,Trendy,Neutral,Every 2–3 months,Sneakers,Bottoms,Work,Eco-friendly,Oversized,Polyester,All-season,Unisex,Footwear,Casual Sneakers
+45+,Professional,Neutral,Monthly,T-shirt,Accessories,Sports/Fitness,Designer,Oversized,Polyester,All-season,Unisex,Tops,Plain Cotton T-shirt
+35–44,Casual,Blue,Every 2–3 months,Watch,Accessories,Work,Designer,Regular,Linen,All-season,Men,Accessories,Smartwatch
+35–44,Casual,Black,Weekly,Watch,Tops,Work,Eco-friendly,Regular,Blended,All-season,Men,Accessories,Smartwatch
+35–44,Professional,Black,Weekly,Hoodie,Bottoms,Work,Value-for-money,Oversized,Linen,All-season,Unisex,Tops,Formal Shirt
+35–44,Sporty,Bright,Monthly,Jeans,Bottoms,Events/Parties,Value-for-money,Slim,Cotton,Winter,Unisex,Outerwear,Jeans
+35–44,Casual,Bright,Rarely,Shirt,Outerwear,Work,Designer,Slim,Blended,Winter,Unisex,Tops,Shirt
+25–34,Trendy,Bright,Rarely,Sneakers,Accessories,Events/Parties,Trendy,Regular,Cotton,Winter,Unisex,Footwear,Casual Sneakers
+18–24,Trendy,Bright,Monthly,Cap,Footwear,Casual Outings,Value-for-money,Slim,Linen,Winter,Women,Footwear,Cap
+35–44,Classic,Red,Monthly,Jacket,Accessories,Sports/Fitness,Eco-friendly,Regular,Blended,Summer,Unisex,Accessories,Jacket
+Under 18,Casual,Red,Weekly,Jeans,Accessories,Sports/Fitness,Value-for-money,Oversized,Linen,Winter,Unisex,Accessories,Jeans
+Under 18,Sporty,Neutral,Rarely,Jeans,Outerwear,Sports/Fitness,Eco-friendly,Regular,Blended,All-season,Unisex,Tops,Jeans
+Under 18,Professional,White,Every 2–3 months,Hoodie,Footwear,Sports/Fitness,Designer,Regular,Linen,All-season,Unisex,Footwear,Hoodie
+Under 18,Professional,Blue,Weekly,Cap,Outerwear,Sports/Fitness,Value-for-money,Oversized,Polyester,Winter,Unisex,Accessories,Cap
+25–34,Sporty,Blue,Monthly,T-shirt,Footwear,Sports/Fitness,Eco-friendly,Slim,Linen,All-season,Men,Footwear,Plain Cotton T-shirt
+Under 18,Classic,Bright,Rarely,T-shirt,Tops,Sports/Fitness,Designer,Regular,Polyester,Winter,Unisex,Tops,Plain Cotton T-shirt
+35–44,Professional,Neutral,Every 2–3 months,Hoodie,Footwear,Casual Outings,Trendy,Regular,Linen,All-season,Unisex,Footwear,Hoodie
+45+,Casual,Grey,Every 2–3 months,Watch,Outerwear,Work,Eco-friendly,Oversized,Blended,Summer,Unisex,Accessories,Smartwatch
+Under 18,Classic,White,Weekly,T-shirt,Accessories,Travel,Trendy,Slim,Blended,Summer,Unisex,Tops,Plain Cotton T-shirt
+25–34,Casual,Neutral,Rarely,Shirt,Footwear,Events/Parties,Trendy,Regular,Blended,Winter,Unisex,Footwear,Shirt
+25–34,Trendy,White,Rarely,Sneakers,Footwear,Travel,Comfort,Oversized,Wool,Winter,Unisex,Footwear,Casual Sneakers
+Under 18,Classic,White,Monthly,Jeans,Bottoms,Travel,Value-for-money,Regular,Cotton,Winter,Unisex,Outerwear,Jeans
+45+,Professional,White,Rarely,Jeans,Accessories,Work,Eco-friendly,Oversized,Blended,All-season,Unisex,Accessories,Formal Shirt
+Under 18,Classic,Neutral,Rarely,Shirt,Tops,Work,Trendy,Slim,Polyester,Winter,Unisex,Tops,Shirt
+25–34,Classic,Bright,Weekly,Cap,Outerwear,Work,Comfort,Slim,Blended,Summer,Unisex,Accessories,Cap
+18–24,Classic,Blue,Rarely,T-shirt,Tops,Sports/Fitness,Designer,Slim,Wool,All-season,Unisex,Tops,Plain Cotton T-shirt
+35–44,Classic,Blue,Every 2–3 months,Jeans,Accessories,Casual Outings,Eco-friendly,Slim,Polyester,Winter,Unisex,Tops,Jeans
+25–34,Casual,Bright,Weekly,Jacket,Footwear,Sports/Fitness,Trendy,Regular,Wool,All-season,Unisex,Footwear,Jacket
+Under 18,Trendy,White,Weekly,Cap,Footwear,Casual Outings,Value-for-money,Regular,Polyester,All-season,Unisex,Footwear,Cap
+35–44,Sporty,Grey,Monthly,Sneakers,Accessories,Casual Outings,Comfort,Slim,Linen,Winter,Unisex,Footwear,Casual Sneakers
+Under 18,Classic,Black,Rarely,Sneakers,Footwear,Travel,Trendy,Slim,Cotton,All-season,Unisex,Footwear,Casual Sneakers
+Under 18,Professional,Neutral,Monthly,Jeans,Footwear,Travel,Value-for-money,Slim,Cotton,Summer,Unisex,Footwear,Jeans
+18–24,Classic,Black,Every 2–3 months,Hoodie,Footwear,Casual Outings,Trendy,Regular,Wool,Summer,Unisex,Footwear,Hoodie
+35–44,Professional,Bright,Weekly,Cap,Outerwear,Casual Outings,Eco-friendly,Slim,Cotton,All-season,Women,Tops,Cap
+35–44,Casual,Grey,Weekly,Jeans,Outerwear,Sports/Fitness,Eco-friendly,Slim,Wool,Winter,Unisex,Outerwear,Jeans
+18–24,Professional,Neutral,Weekly,Hoodie,Bottoms,Sports/Fitness,Eco-friendly,Slim,Wool,All-season,Unisex,Tops,Hoodie
+25–34,Sporty,Bright,Every 2–3 months,Jeans,Tops,Travel,Comfort,Oversized,Wool,Summer,Unisex,Tops,Jeans
+Under 18,Trendy,White,Every 2–3 months,Jacket,Accessories,Work,Eco-friendly,Slim,Cotton,All-season,Unisex,Accessories,Jacket
+45+,Professional,Blue,Monthly,Cap,Accessories,Casual Outings,Value-for-money,Oversized,Wool,All-season,Unisex,Tops,Cap
+Under 18,Professional,Black,Monthly,Watch,Accessories,Sports/Fitness,Trendy,Oversized,Cotton,Summer,Unisex,Accessories,Analog Watch
+Under 18,Trendy,Red,Monthly,Sneakers,Bottoms,Travel,Designer,Slim,Wool,All-season,Women,Footwear,Casual Sneakers
+25–34,Sporty,Red,Rarely,Jeans,Outerwear,Sports/Fitness,Value-for-money,Oversized,Blended,All-season,Unisex,Tops,Jeans
+Under 18,Classic,Grey,Weekly,Jacket,Bottoms,Casual Outings,Value-for-money,Slim,Wool,Winter,Unisex,Tops,Jacket
+18–24,Professional,White,Weekly,Hoodie,Accessories,Casual Outings,Eco-friendly,Regular,Polyester,Winter,Unisex,Tops,Hoodie
+18–24,Trendy,Black,Monthly,Hoodie,Tops,Events/Parties,Comfort,Regular,Wool,Summer,Unisex,Tops,Hoodie
+35–44,Casual,White,Weekly,Sneakers,Footwear,Work,Trendy,Regular,Linen,Summer,Unisex,Footwear,Casual Sneakers
+45+,Trendy,Black,Monthly,Shirt,Outerwear,Events/Parties,Comfort,Regular,Wool,Summer,Unisex,Tops,Shirt
+Under 18,Casual,Grey,Rarely,Jeans,Outerwear,Travel,Trendy,Oversized,Polyester,Winter,Unisex,Outerwear,Jeans
+Under 18,Sporty,Grey,Rarely,Cap,Bottoms,Sports/Fitness,Trendy,Slim,Polyester,Summer,Unisex,Accessories,Cap
+25–34,Classic,Red,Every 2–3 months,T-shirt,Outerwear,Travel,Comfort,Slim,Cotton,Summer,Unisex,Tops,Plain Cotton T-shirt
+18–24,Trendy,White,Rarely,Hoodie,Accessories,Casual Outings,Value-for-money,Slim,Blended,Summer,Unisex,Tops,Hoodie
+45+,Professional,Neutral,Monthly,Cap,Accessories,Events/Parties,Trendy,Regular,Wool,Winter,Unisex,Accessories,Cap
+35–44,Sporty,Red,Rarely,Cap,Bottoms,Events/Parties,Comfort,Regular,Cotton,All-season,Unisex,Bottoms,Cap
+18–24,Trendy,White,Every 2–3 months,Watch,Accessories,Events/Parties,Trendy,Slim,Blended,Summer,Unisex,Accessories,Smartwatch
+35–44,Professional,Red,Weekly,Cap,Tops,Travel,Designer,Regular,Wool,All-season,Unisex,Accessories,Cap
+25–34,Trendy,Neutral,Monthly,Cap,Bottoms,Casual Outings,Value-for-money,Slim,Linen,Summer,Unisex,Tops,Cap
+25–34,Casual,Blue,Weekly,Watch,Tops,Sports/Fitness,Eco-friendly,Slim,Wool,All-season,Men,Accessories,Smartwatch
+Under 18,Trendy,Blue,Every 2–3 months,Hoodie,Footwear,Sports/Fitness,Trendy,Slim,Polyester,Winter,Unisex,Footwear,Hoodie
+45+,Trendy,Blue,Every 2–3 months,Cap,Tops,Travel,Designer,Slim,Polyester,Winter,Unisex,Accessories,Cap
+35–44,Trendy,Blue,Every 2–3 months,Shirt,Footwear,Events/Parties,Eco-friendly,Slim,Linen,Summer,Unisex,Footwear,Shirt
+18–24,Sporty,Bright,Weekly,Shirt,Footwear,Work,Eco-friendly,Slim,Cotton,All-season,Unisex,Footwear,Shirt
+25–34,Trendy,Black,Weekly,Jacket,Tops,Travel,Trendy,Slim,Blended,Winter,Unisex,Outerwear,Jacket
+Under 18,Professional,Bright,Weekly,Watch,Bottoms,Travel,Comfort,Regular,Wool,Summer,Unisex,Bottoms,Analog Watch
+Under 18,Casual,Bright,Weekly,Jacket,Accessories,Casual Outings,Trendy,Slim,Polyester,Summer,Unisex,Tops,Jacket
+35–44,Casual,Bright,Every 2–3 months,Watch,Accessories,Sports/Fitness,Designer,Slim,Cotton,Winter,Unisex,Accessories,Smartwatch
+25–34,Trendy,Blue,Every 2–3 months,Jeans,Footwear,Travel,Eco-friendly,Regular,Linen,Winter,Unisex,Footwear,Jeans
+45+,Sporty,Neutral,Monthly,Jeans,Footwear,Travel,Trendy,Regular,Polyester,Summer,Unisex,Footwear,Jeans
+25–34,Sporty,Grey,Monthly,Cap,Bottoms,Events/Parties,Comfort,Regular,Linen,All-season,Unisex,Bottoms,Cap
+35–44,Professional,Grey,Weekly,T-shirt,Outerwear,Events/Parties,Trendy,Slim,Wool,All-season,Unisex,Tops,Plain Cotton T-shirt
+35–44,Trendy,Black,Rarely,Jeans,Tops,Work,Value-for-money,Oversized,Blended,All-season,Unisex,Tops,Jeans
+25–34,Casual,Blue,Rarely,T-shirt,Footwear,Casual Outings,Comfort,Oversized,Polyester,Summer,Unisex,Footwear,Plain Cotton T-shirt
+35–44,Sporty,Blue,Every 2–3 months,Jeans,Accessories,Work,Designer,Regular,Polyester,Winter,Men,Accessories,Jeans
+25–34,Trendy,Blue,Every 2–3 months,Sneakers,Bottoms,Events/Parties,Eco-friendly,Oversized,Wool,Summer,Unisex,Footwear,Casual Sneakers
+18–24,Sporty,Red,Every 2–3 months,Jeans,Tops,Sports/Fitness,Trendy,Regular,Cotton,Winter,Unisex,Outerwear,Jeans
+25–34,Sporty,White,Monthly,Jacket,Bottoms,Events/Parties,Comfort,Slim,Blended,All-season,Unisex,Bottoms,Jacket
+25–34,Casual,Red,Monthly,Hoodie,Tops,Casual Outings,Value-for-money,Oversized,Polyester,All-season,Unisex,Tops,Hoodie
+35–44,Classic,White,Every 2–3 months,Cap,Tops,Events/Parties,Comfort,Slim,Blended,Winter,Unisex,Accessories,Cap
+35–44,Professional,Blue,Every 2–3 months,Jacket,Footwear,Casual Outings,Value-for-money,Oversized,Polyester,Winter,Unisex,Footwear,Jacket
+Under 18,Professional,Blue,Every 2–3 months,Hoodie,Bottoms,Casual Outings,Designer,Slim,Blended,Summer,Unisex,Tops,Hoodie
+Under 18,Casual,Red,Rarely,Shirt,Bottoms,Casual Outings,Eco-friendly,Oversized,Linen,All-season,Unisex,Tops,Shirt
+18–24,Sporty,Red,Monthly,Jacket,Accessories,Casual Outings,Designer,Slim,Polyester,Summer,Unisex,Tops,Jacket
+Under 18,Trendy,White,Rarely,Shirt,Accessories,Casual Outings,Trendy,Slim,Blended,Summer,Unisex,Tops,Shirt
+25–34,Sporty,Grey,Rarely,T-shirt,Footwear,Sports/Fitness,Comfort,Oversized,Cotton,Summer,Unisex,Footwear,Plain Cotton T-shirt
+35–44,Casual,White,Every 2–3 months,T-shirt,Footwear,Work,Value-for-money,Slim,Linen,All-season,Unisex,Footwear,Plain Cotton T-shirt
+Under 18,Professional,Red,Every 2–3 months,Sneakers,Outerwear,Travel,Value-for-money,Slim,Linen,Summer,Women,Footwear,Casual Sneakers
+Under 18,Sporty,Neutral,Weekly,Jeans,Accessories,Work,Comfort,Slim,Cotton,Summer,Unisex,Accessories,Jeans
+18–24,Professional,Red,Weekly,Jacket,Tops,Casual Outings,Comfort,Oversized,Blended,Summer,Women,Tops,Jacket
+18–24,Trendy,Neutral,Rarely,Shirt,Bottoms,Sports/Fitness,Trendy,Oversized,Wool,Summer,Unisex,Tops,Shirt
+25–34,Professional,Black,Monthly,Hoodie,Footwear,Events/Parties,Designer,Slim,Cotton,Summer,Unisex,Footwear,Hoodie
+35–44,Professional,Red,Every 2–3 months,T-shirt,Bottoms,Sports/Fitness,Value-for-money,Slim,Blended,Summer,Women,Tops,Plain Cotton T-shirt
+18–24,Classic,Black,Every 2–3 months,Jeans,Bottoms,Casual Outings,Trendy,Oversized,Cotton,All-season,Unisex,Tops,Jeans
+Under 18,Classic,Grey,Rarely,T-shirt,Outerwear,Sports/Fitness,Designer,Oversized,Cotton,Summer,Unisex,Tops,Plain Cotton T-shirt
+35–44,Classic,White,Weekly,Hoodie,Accessories,Sports/Fitness,Trendy,Slim,Polyester,Winter,Unisex,Tops,Hoodie
+35–44,Professional,Neutral,Monthly,Jeans,Footwear,Casual Outings,Value-for-money,Slim,Blended,Summer,Unisex,Footwear,Jeans
+Under 18,Casual,White,Weekly,Jeans,Bottoms,Sports/Fitness,Comfort,Slim,Wool,Summer,Unisex,Bottoms,Jeans
+18–24,Professional,Black,Weekly,Shirt,Footwear,Travel,Comfort,Regular,Polyester,All-season,Unisex,Footwear,Shirt
+Under 18,Casual,Neutral,Weekly,Shirt,Tops,Travel,Designer,Oversized,Cotton,All-season,Unisex,Tops,Shirt
+35–44,Casual,White,Weekly,Jacket,Outerwear,Sports/Fitness,Eco-friendly,Regular,Cotton,Winter,Unisex,Outerwear,Jacket
+45+,Classic,Red,Every 2–3 months,Jacket,Tops,Events/Parties,Designer,Oversized,Cotton,Winter,Unisex,Outerwear,Jacket
+45+,Sporty,Blue,Every 2–3 months,Watch,Footwear,Casual Outings,Eco-friendly,Oversized,Blended,All-season,Unisex,Footwear,Smartwatch
+25–34,Trendy,Black,Weekly,Cap,Footwear,Travel,Trendy,Oversized,Blended,All-season,Unisex,Footwear,Cap
+Under 18,Classic,White,Monthly,Watch,Accessories,Events/Parties,Trendy,Oversized,Polyester,Summer,Unisex,Accessories,Analog Watch
+Under 18,Classic,Black,Rarely,Sneakers,Bottoms,Sports/Fitness,Value-for-money,Oversized,Wool,All-season,Unisex,Footwear,Running Sneakers
+25–34,Sporty,Bright,Monthly,T-shirt,Bottoms,Events/Parties,Eco-friendly,Oversized,Polyester,Winter,Unisex,Tops,Plain Cotton T-shirt
+25–34,Trendy,Black,Monthly,Jacket,Tops,Work,Value-for-money,Oversized,Linen,Summer,Unisex,Outerwear,Jacket
+25–34,Professional,Neutral,Monthly,Shirt,Outerwear,Travel,Comfort,Regular,Cotton,Winter,Unisex,Tops,Shirt
+35–44,Professional,Bright,Weekly,Hoodie,Bottoms,Sports/Fitness,Eco-friendly,Slim,Cotton,Summer,Women,Tops,Hoodie
+Under 18,Classic,Neutral,Every 2–3 months,Shirt,Accessories,Casual Outings,Designer,Slim,Cotton,All-season,Unisex,Tops,Shirt
+35–44,Trendy,Blue,Monthly,T-shirt,Tops,Sports/Fitness,Comfort,Regular,Polyester,Winter,Unisex,Tops,Graphic T-shirt
+25–34,Classic,Bright,Weekly,Watch,Tops,Casual Outings,Comfort,Regular,Polyester,Summer,Unisex,Tops,Analog Watch
+Under 18,Casual,Red,Monthly,Shirt,Accessories,Sports/Fitness,Designer,Regular,Cotton,Summer,Unisex,Tops,Shirt
+35–44,Classic,Black,Monthly,Cap,Outerwear,Events/Parties,Comfort,Regular,Polyester,All-season,Unisex,Accessories,Cap
+35–44,Classic,White,Weekly,Sneakers,Accessories,Events/Parties,Eco-friendly,Oversized,Blended,All-season,Unisex,Footwear,Casual Sneakers
+25–34,Professional,Grey,Every 2–3 months,T-shirt,Outerwear,Events/Parties,Value-for-money,Slim,Blended,All-season,Unisex,Tops,Plain Cotton T-shirt
+Under 18,Professional,Black,Every 2–3 months,Watch,Accessories,Work,Comfort,Oversized,Polyester,Winter,Unisex,Accessories,Formal Shirt
+25–34,Professional,Black,Rarely,Cap,Accessories,Casual Outings,Eco-friendly,Slim,Cotton,Summer,Unisex,Tops,Cap
+Under 18,Casual,Blue,Weekly,Hoodie,Footwear,Events/Parties,Trendy,Slim,Polyester,All-season,Men,Footwear,Hoodie
+45+,Professional,Red,Rarely,Watch,Tops,Work,Eco-friendly,Regular,Polyester,Winter,Unisex,Accessories,Formal Shirt
+18–24,Trendy,Grey,Rarely,Jeans,Accessories,Casual Outings,Value-for-money,Oversized,Polyester,Winter,Unisex,Tops,Jeans
+18–24,Sporty,Bright,Rarely,Cap,Accessories,Sports/Fitness,Eco-friendly,Regular,Linen,Winter,Unisex,Accessories,Cap
+18–24,Trendy,Bright,Every 2–3 months,Cap,Bottoms,Work,Designer,Oversized,Blended,All-season,Women,Accessories,Cap
+25–34,Trendy,Bright,Weekly,Sneakers,Tops,Travel,Value-for-money,Slim,Wool,All-season,Women,Footwear,Casual Sneakers
+45+,Professional,Neutral,Rarely,T-shirt,Bottoms,Work,Trendy,Regular,Wool,Summer,Unisex,Tops,Plain Cotton T-shirt
+Under 18,Sporty,Neutral,Weekly,Hoodie,Tops,Work,Designer,Regular,Linen,Summer,Unisex,Tops,Hoodie
+35–44,Sporty,White,Weekly,Sneakers,Bottoms,Casual Outings,Eco-friendly,Slim,Polyester,All-season,Unisex,Footwear,Casual Sneakers
+Under 18,Sporty,Grey,Every 2–3 months,Watch,Accessories,Sports/Fitness,Value-for-money,Slim,Linen,Winter,Unisex,Accessories,Smartwatch
+35–44,Casual,Bright,Rarely,Sneakers,Accessories,Travel,Trendy,Slim,Linen,Winter,Unisex,Footwear,Casual Sneakers
+Under 18,Professional,Neutral,Rarely,Cap,Footwear,Events/Parties,Designer,Regular,Cotton,Winter,Unisex,Footwear,Cap
+45+,Sporty,White,Weekly,T-shirt,Bottoms,Events/Parties,Trendy,Oversized,Blended,Summer,Unisex,Tops,Plain Cotton T-shirt
+35–44,Casual,Red,Monthly,Jacket,Outerwear,Work,Eco-friendly,Regular,Wool,Winter,Unisex,Outerwear,Jacket
+25–34,Classic,White,Every 2–3 months,Sneakers,Footwear,Casual Outings,Trendy,Oversized,Polyester,Summer,Unisex,Footwear,Casual Sneakers
+Under 18,Classic,Neutral,Every 2–3 months,Jeans,Bottoms,Casual Outings,Comfort,Regular,Wool,Summer,Unisex,Tops,Jeans
+Under 18,Casual,Blue,Every 2–3 months,Sneakers,Bottoms,Events/Parties,Designer,Regular,Wool,Winter,Men,Footwear,Casual Sneakers
+35–44,Casual,Blue,Every 2–3 months,Watch,Footwear,Travel,Trendy,Slim,Blended,Winter,Men,Footwear,Smartwatch
+25–34,Professional,Bright,Rarely,Watch,Accessories,Sports/Fitness,Eco-friendly,Oversized,Wool,All-season,Women,Accessories,Analog Watch
+25–34,Professional,Blue,Rarely,Hoodie,Bottoms,Travel,Eco-friendly,Regular,Wool,All-season,Unisex,Tops,Hoodie
+45+,Classic,Bright,Monthly,Watch,Accessories,Sports/Fitness,Trendy,Regular,Linen,Winter,Unisex,Accessories,Analog Watch
+25–34,Sporty,Bright,Every 2–3 months,Shirt,Footwear,Events/Parties,Eco-friendly,Slim,Blended,Summer,Unisex,Footwear,Shirt
+25–34,Classic,Neutral,Every 2–3 months,T-shirt,Accessories,Sports/Fitness,Value-for-money,Slim,Cotton,Summer,Unisex,Tops,Plain Cotton T-shirt
+25–34,Sporty,Blue,Weekly,T-shirt,Tops,Casual Outings,Value-for-money,Oversized,Polyester,Summer,Unisex,Tops,Plain Cotton T-shirt
+18–24,Sporty,Bright,Rarely,Jacket,Outerwear,Work,Value-for-money,Regular,Wool,Summer,Unisex,Outerwear,Jacket
+45+,Professional,Grey,Every 2–3 months,Jacket,Bottoms,Work,Comfort,Oversized,Polyester,Summer,Unisex,Bottoms,Formal Shirt
+Under 18,Trendy,Red,Monthly,T-shirt,Outerwear,Events/Parties,Trendy,Regular,Cotton,All-season,Unisex,Tops,Graphic T-shirt
+35–44,Trendy,White,Monthly,Jeans,Accessories,Casual Outings,Comfort,Oversized,Polyester,Winter,Unisex,Tops,Jeans
+Under 18,Casual,White,Rarely,Jacket,Bottoms,Travel,Eco-friendly,Slim,Cotton,All-season,Unisex,Outerwear,Jacket
+45+,Professional,Neutral,Monthly,Hoodie,Accessories,Casual Outings,Comfort,Regular,Linen,Summer,Unisex,Tops,Hoodie
+35–44,Sporty,Blue,Monthly,Watch,Tops,Work,Eco-friendly,Oversized,Wool,Summer,Unisex,Accessories,Smartwatch
+45+,Trendy,Blue,Rarely,T-shirt,Footwear,Work,Eco-friendly,Slim,Cotton,Summer,Unisex,Footwear,Graphic T-shirt
+25–34,Sporty,Bright,Every 2–3 months,Cap,Bottoms,Casual Outings,Designer,Slim,Polyester,Summer,Unisex,Tops,Cap
+35–44,Trendy,Black,Every 2–3 months,Jacket,Tops,Casual Outings,Value-for-money,Oversized,Wool,Winter,Unisex,Tops,Jacket
+25–34,Trendy,Bright,Monthly,T-shirt,Tops,Work,Eco-friendly,Regular,Linen,Summer,Unisex,Tops,Graphic T-shirt
+Under 18,Trendy,Red,Monthly,Shirt,Bottoms,Travel,Designer,Regular,Wool,Winter,Unisex,Tops,Shirt
+Under 18,Professional,Grey,Every 2–3 months,Sneakers,Accessories,Events/Parties,Value-for-money,Slim,Cotton,Summer,Unisex,Footwear,Casual Sneakers
+35–44,Classic,White,Rarely,Watch,Tops,Events/Parties,Eco-friendly,Regular,Linen,Winter,Unisex,Accessories,Analog Watch
+35–44,Sporty,Bright,Monthly,T-shirt,Outerwear,Casual Outings,Eco-friendly,Regular,Polyester,All-season,Unisex,Tops,Plain Cotton T-shirt
+45+,Professional,Black,Weekly,Sneakers,Tops,Events/Parties,Comfort,Regular,Linen,Summer,Unisex,Footwear,Casual Sneakers
+45+,Professional,Black,Rarely,Jacket,Accessories,Work,Comfort,Slim,Linen,Winter,Unisex,Accessories,Formal Shirt
+25–34,Professional,Bright,Monthly,Sneakers,Accessories,Work,Value-for-money,Oversized,Blended,All-season,Women,Footwear,Casual Sneakers
+35–44,Professional,Neutral,Monthly,Watch,Outerwear,Casual Outings,Eco-friendly,Regular,Linen,Summer,Unisex,Tops,Analog Watch
+Under 18,Professional,White,Weekly,T-shirt,Tops,Casual Outings,Trendy,Slim,Linen,Summer,Unisex,Tops,Plain Cotton T-shirt

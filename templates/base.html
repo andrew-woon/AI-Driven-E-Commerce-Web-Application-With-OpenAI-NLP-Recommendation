@@ -1,0 +1,180 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>{% block title%}Product Recommendation{% endblock %}</title>
+  <!-- SEO Meta Tags-->
+  <meta name="description" content=" Product Recommendation">
+  <meta name="keywords"
+    content="bootstrap, shop, e-commerce, market, modern, responsive,  business, mobile, bootstrap, html5, css3, js, gallery, slider, touch, creative, clean">
+  <meta name="author" content="DSE  Studio">
+  <!-- Viewport-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicon and Touch Icons-->
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'main/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'main/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'main/favicon-16x16.png' %}">
+  <link rel="manifest" href="{% static 'main/site.webmanifest' %}">
+  <link rel="mask-icon" color="#fe6a6a" href="{% static 'main/safari-pinned-tab.svg' %}">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Vendor Styles including: Font Icons, Plugins, etc.-->
+  <link rel="stylesheet" media="screen" href="{% static 'vendor/simplebar/dist/simplebar.min.css' %}" />
+  <link rel="stylesheet" media="screen" href="{% static 'vendor/tiny-slider/dist/tiny-slider.css' %}" />
+  <link rel="stylesheet" media="screen" href="{% static 'vendor/nouislider/distribute/nouislider.min.css' %}" />
+  <link rel="stylesheet" media="screen" href="{% static 'vendor/drift-zoom/dist/drift-basic.min.css' %}" />
+  <link rel="stylesheet" media="screen" href="{% static 'vendor/nouislider/distribute/nouislider.min.css' %}" />
+  <link rel="stylesheet" media="screen" href="{% static 'vendor/drift-zoom/dist/drift-basic.min.css' %}" />
+  <!-- Main Theme Styles + Bootstrap-->
+  <link rel="stylesheet" media="screen" href="{% static 'css/theme.min.css' %}">
+  <style>
+  input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+input[type=number] {
+  appearance: number;
+  -moz-appearance: textfield;
+}
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <header class="shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-sticky">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand d-none d-sm-block flex-shrink-0" href="{% url 'apps.main:index' %}">
+          <img src="{% static 'img/logo-dark.png' %}" width="142" alt="eShop">
+        </a>
+        <a class="navbar-brand d-sm-none flex-shrink-0 me-2" href="{% url 'apps.main:index' %}">
+          <img src="{% static 'img/logo-icon.png' %}" width="74" alt="eShop">
+        </a>
+  
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <!-- Nav Menu -->
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link" href="{% url 'apps.main:index' %}">Home</a></li>
+            <li class="nav-item dropdown {{Accounts}}">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Recommendation</a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" style="font-size: 12px;" href="{% url 'apps.main:chat_recommend_view' %}">Recommended by chatgpt</a></li>
+                  <li><a class="dropdown-item" style="font-size: 12px;" href="{% url 'apps.main:ml_recommend_view' %}">Recommended by Our Model</a></li>
+              </ul>
+            </li>
+          </ul>
+  
+          <!-- Search -->
+          <form class="d-none d-lg-flex mx-3" method="POST" action="{% url 'apps.main:search_product' %}">
+            {% csrf_token %}
+            <input class="form-control" type="text" name="keyword" placeholder="Search for products" required>
+            <button class="btn btn-outline-dark ms-2" type="submit"><i class="ci-search"></i></button>
+          </form>
+  
+          <!-- User Section -->
+          <div class="d-flex align-items-center">
+            {% if user.is_authenticated %}
+              <div class="d-flex align-items-center me-3">
+                {% if user.is_staff %}
+                  <a href="{% url 'apps.seller_accounts:profile' %}">
+                    <i class="ci-user me-2"></i><small>Hello, {{ user.first_name }}</small>
+                  </a>
+                {% else %}
+                  <a href="{% url 'apps.accounts:profile' %}">
+                    <i class="ci-user me-2"></i><small>Hello, {{ user.first_name }}</small>
+                  </a>
+                {% endif %}
+              </div>
+              <a href="{% url 'apps.accounts:signout' %}" class="btn btn-outline-primary btn-sm">Logout</a>
+            {% else %}
+              <a href="{% url 'apps.accounts:signin' %}" class="btn btn-outline-secondary btn-sm me-2">
+                <i class="ci-user me-1"></i> Sign In
+              </a>
+            {% endif %}
+  
+            {% if not user.is_staff %}
+              <a href="{% url 'apps.cart:mycart' %}" class="btn btn-outline-secondary btn-sm ms-2">
+                <i class="ci-cart me-1"></i> My Cart
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+{% block content %}
+
+{% endblock %}
+{% include 'messages.html' %}
+
+<footer class="bg-dark text-light pt-5">
+  <div class="bg-darker">
+    <div class="container">
+      <hr class="hr-light mb-5">
+
+      <div class="row align-items-center pb-4">
+        <!-- Branding -->
+        <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+          <a href="#" class="d-inline-flex align-items-center text-decoration-none">
+            <h2 class="h4 text-light m-0">AI Powered E-Commerce</h2>
+          </a>
+        </div>
+
+        <!-- Social Media -->
+        <div class="col-md-6 text-center text-md-end">
+          <div class="d-flex justify-content-center justify-content-md-end gap-4">
+            <a class="text-light fs-5" href="https://facebook.com" target="_blank" title="Facebook">
+              <i class="ci-facebook"></i>
+            </a>
+            <a class="text-light fs-5" href="https://twitter.com" target="_blank" title="Twitter">
+              <i class="ci-twitter"></i>
+            </a>
+            <a class="text-light fs-5" href="https://instagram.com" target="_blank" title="Instagram">
+              <i class="ci-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-center fs-xs text-light opacity-50 pb-4">
+        © All rights reserved. FYP
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Back To Top Button--><a class="btn-scroll-top" href="#top" data-scroll><span
+      class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span><i class="btn-scroll-top-icon ci-arrow-up">
+    </i></a>
+  <!-- Vendor scrits: js libraries and plugins-->
+  <script src="{% static 'vendor/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/simplebar/dist/simplebar.min.js' %}"></script>
+  <script src="{% static 'vendor/tiny-slider/dist/min/tiny-slider.js' %}"></script>
+  <script src="{% static 'vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js' %}"></script>
+  <script src="{% static 'vendor/nouislider/distribute/nouislider.min.js' %}"></script>
+  <script src="{% static 'vendor/drift-zoom/dist/Drift.min.js' %}"></script>
+  <!-- Main theme script-->
+  <script src="{% static 'js/theme.min.js' %}"></script>
+  <script src="{% static 'js/account.js' %}"></script>
+  <script src="{% static 'js/seller_account.js' %}"></script>
+  <script src="{% static 'js/product-filter.js' %}"></script>
+  <script src="{% static 'js/product-filter-search.js' %}"></script>
+
+
+</body>
+
+</html>

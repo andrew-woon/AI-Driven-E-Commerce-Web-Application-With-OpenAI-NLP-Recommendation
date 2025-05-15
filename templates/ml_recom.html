@@ -1,0 +1,192 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<form method="post" id="recommendationForm">
+  {% csrf_token %}
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <h2 class="fw-bold text-center mb-4">Find Your Recommended Products</h2>
+        <h6 class="text-center mb-4">Fill the Form, Based on your answer our AI model will recommend the products.</h6>
+        <div class="row g-3">
+
+          <!-- Dropdowns Start -->
+          <div class="col-md-4">
+            <label class="form-label">Age Group</label>
+            <select name="age_group" class="form-select" required>
+              <option value="Under 18" {% if request.POST.age_group == "Under 18" %}selected{% endif %}>Under 18</option>
+              <option value="18–24" {% if request.POST.age_group == "18–24" %}selected{% endif %}>18–24</option>
+              <option value="25–34" {% if request.POST.age_group == "25–34" %}selected{% endif %}>25–34</option>
+              <option value="35–44" {% if request.POST.age_group == "35–44" %}selected{% endif %}>35–44</option>
+              <option value="45+" {% if request.POST.age_group == "45+" %}selected{% endif %}>45+</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Style Preference</label>
+            <select name="style_preference" class="form-select" required>
+              <option value="Trendy" {% if request.POST.style_preference == "Trendy" %}selected{% endif %}>Trendy</option>
+              <option value="Classic" {% if request.POST.style_preference == "Classic" %}selected{% endif %}>Classic</option>
+              <option value="Casual" {% if request.POST.style_preference == "Casual" %}selected{% endif %}>Casual</option>
+              <option value="Sporty" {% if request.POST.style_preference == "Sporty" %}selected{% endif %}>Sporty</option>
+              <option value="Professional" {% if request.POST.style_preference == "Professional" %}selected{% endif %}>Professional</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Color Preference</label>
+            <select name="color_preference" class="form-select" required>
+              <option value="Black" {% if request.POST.color_preference == "Black" %}selected{% endif %}>Black</option>
+              <option value="White" {% if request.POST.color_preference == "White" %}selected{% endif %}>White</option>
+              <option value="Blue" {% if request.POST.color_preference == "Blue" %}selected{% endif %}>Blue</option>
+              <option value="Grey" {% if request.POST.color_preference == "Grey" %}selected{% endif %}>Grey</option>
+              <option value="Red" {% if request.POST.color_preference == "Red" %}selected{% endif %}>Red</option>
+              <option value="Neutral" {% if request.POST.color_preference == "Neutral" %}selected{% endif %}>Neutral</option>
+              <option value="Bright" {% if request.POST.color_preference == "Bright" %}selected{% endif %}>Bright</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Shopping Frequency</label>
+            <select name="shopping_frequency" class="form-select" required>
+              <option value="Weekly" {% if request.POST.shopping_frequency == "Weekly" %}selected{% endif %}>Weekly</option>
+              <option value="Monthly" {% if request.POST.shopping_frequency == "Monthly" %}selected{% endif %}>Monthly</option>
+              <option value="Every 2–3 months" {% if request.POST.shopping_frequency == "Every 2–3 months" %}selected{% endif %}>Every 2–3 months</option>
+              <option value="Rarely" {% if request.POST.shopping_frequency == "Rarely" %}selected{% endif %}>Rarely</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Spending Category</label>
+            <select name="spending_category" class="form-select" required>
+              <option value="Footwear" {% if request.POST.spending_category == "Footwear" %}selected{% endif %}>Footwear</option>
+              <option value="Tops" {% if request.POST.spending_category == "Tops" %}selected{% endif %}>Tops</option>
+              <option value="Bottoms" {% if request.POST.spending_category == "Bottoms" %}selected{% endif %}>Bottoms</option>
+              <option value="Outerwear" {% if request.POST.spending_category == "Outerwear" %}selected{% endif %}>Outerwear</option>
+              <option value="Accessories" {% if request.POST.spending_category == "Accessories" %}selected{% endif %}>Accessories</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Shopping Occasion</label>
+            <select name="shopping_occasion" class="form-select" required>
+              <option value="Work" {% if request.POST.shopping_occasion == "Work" %}selected{% endif %}>Work</option>
+              <option value="Sports/Fitness" {% if request.POST.shopping_occasion == "Sports/Fitness" %}selected{% endif %}>Sports/Fitness</option>
+              <option value="Travel" {% if request.POST.shopping_occasion == "Travel" %}selected{% endif %}>Travel</option>
+              <option value="Casual Outings" {% if request.POST.shopping_occasion == "Casual Outings" %}selected{% endif %}>Casual Outings</option>
+              <option value="Events/Parties" {% if request.POST.shopping_occasion == "Events/Parties" %}selected{% endif %}>Events/Parties</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Interest</label>
+            <select name="interest" class="form-select" required>
+              <option value="Comfort" {% if request.POST.interest == "Comfort" %}selected{% endif %}>Comfort</option>
+              <option value="Trendy" {% if request.POST.interest == "Trendy" %}selected{% endif %}>Trendy</option>
+              <option value="Designer" {% if request.POST.interest == "Designer" %}selected{% endif %}>Designer</option>
+              <option value="Eco-friendly" {% if request.POST.interest == "Eco-friendly" %}selected{% endif %}>Eco-friendly</option>
+              <option value="Value-for-money" {% if request.POST.interest == "Value-for-money" %}selected{% endif %}>Value-for-money</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Fit Preference</label>
+            <select name="fit_preference" class="form-select" required>
+              <option value="Slim" {% if request.POST.fit_preference == "Slim" %}selected{% endif %}>Slim</option>
+              <option value="Regular" {% if request.POST.fit_preference == "Regular" %}selected{% endif %}>Regular</option>
+              <option value="Oversized" {% if request.POST.fit_preference == "Oversized" %}selected{% endif %}>Oversized</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Fabric Preference</label>
+            <select name="fabric_preference" class="form-select" required>
+              <option value="Cotton" {% if request.POST.fabric_preference == "Cotton" %}selected{% endif %}>Cotton</option>
+              <option value="Polyester" {% if request.POST.fabric_preference == "Polyester" %}selected{% endif %}>Polyester</option>
+              <option value="Linen" {% if request
+                <option value="Wool" {% if request.POST.fabric_preference == "Wool" %}selected{% endif %}>Wool</option>
+                <option value="Blended" {% if request.POST.fabric_preference == "Blended" %}selected{% endif %}>Blended</option>
+              </select>
+            </div>
+  
+            <div class="col-md-4">
+              <label class="form-label">Season Shopping</label>
+              <select name="season_shopping" class="form-select" required>
+                <option value="Summer" {% if request.POST.season_shopping == "Summer" %}selected{% endif %}>Summer</option>
+                <option value="Winter" {% if request.POST.season_shopping == "Winter" %}selected{% endif %}>Winter</option>
+                <option value="All-season" {% if request.POST.season_shopping == "All-season" %}selected{% endif %}>All-season</option>
+              </select>
+            </div>
+  
+          </div> <!-- end .row -->
+  
+          <!-- Submit Button -->
+          <div class="text-center mt-4">
+            <button type="submit" class="btn btn-primary btn-lg">
+              <span id="btnText">Get Recommendations</span>
+              <span id="btnSpinner" class="spinner-border spinner-border-sm d-none" role="status"></span>
+            </button>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </form>
+  <!-- AI Response Toggle -->
+  {% if ai_raw_response %}
+    <div class="text-center mt-4">
+      <button class="btn btn-secondary" onclick="toggleAIResponse()">Show AI Response</button>
+    </div>
+    <div id="aiResponseBox" class="alert alert-info text-center mt-4 d-none">
+      <strong>AI Recommendation:</strong><br>
+      <pre>{{ ai_raw_response|safe }}</pre>
+    </div>
+    <script>
+      function toggleAIResponse() {
+        document.getElementById("aiResponseBox").classList.toggle("d-none");
+      }
+    </script>
+  {% endif %}
+<section class="container py-5 {% if ai_recommendation %}{% else %}d-none{% endif %}" id="recommended-products">
+  <div class="text-center mb-4">
+    <h2 class="fw-bold">{{ ai_gender }} Products</h2>
+  </div>
+
+  <div class="row g-4">
+    {% for p in product_list %}
+      {% if p.match_count >= 2 %}
+        <div class="col-lg-3 col-md-4 col-sm-6 recommended-product-item">
+          <div class="card h-100 border-0 shadow-sm">
+            <a href="{% url 'apps.main:single_product' p.id %}">
+              {% if p.productimagesfiles_set.all %}
+                {% for product_img in p.productimagesfiles_set.all|slice:":1" %}
+                  <img src="{{ product_img.image_file.url }}" class="card-img-top" alt="Product">
+                {% endfor %}
+              {% else %}
+                {% for product_img in p.productimagesurl_set.all|slice:":1" %}
+                  <img src="{{ product_img.image_url }}" class="card-img-top" alt="Product">
+                {% endfor %}
+              {% endif %}
+            </a>
+            <div class="card-body text-center">
+              <h6 class="card-title">{{ p.title }}</h6>
+              <p class="text-accent mb-2">${{ p.market_price }}</p>
+              <a href="{% url 'apps.main:single_product' p.id %}" class="btn btn-sm btn-outline-primary">View</a>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+  <!-- Spinner Script -->
+  <script>
+    document.getElementById('recommendationForm').addEventListener('submit', function () {
+      document.getElementById('btnText').classList.add('d-none');
+      document.getElementById('btnSpinner').classList.remove('d-none');
+    });
+  </script>
+  
+  {% endblock %}
+  

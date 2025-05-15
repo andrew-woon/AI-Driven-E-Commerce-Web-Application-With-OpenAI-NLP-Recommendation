@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Hero Title Section -->
+<div class="page-title-overlap bg-dark pt-4 pb-3 shadow-sm">
+  <div class="container d-lg-flex justify-content-between align-items-center">
+    <div class="order-lg-2 mb-3 mb-lg-0 pt-lg-2">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-light m-0">
+          <li class="breadcrumb-item"><a class="text-nowrap" href="{% url 'apps.main:index' %}"><i class="ci-home"></i> Home</a></li>
+          <li class="breadcrumb-item text-nowrap"><a href="#">Shop</a></li>
+          <li class="breadcrumb-item text-nowrap active" aria-current="page">Search Results</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="order-lg-1 pe-lg-4 text-center text-lg-start">
+      <h1 class="h3 text-light mb-0">Results for <span class="text-success">“{{ keyword }}”</span></h1>
+    </div>
+  </div>
+</div>
+
+<!-- Product Grid -->
+<div class="container my-5">
+  <div class="row">
+    <section class="col-lg-12">
+      <div class="row g-4" id="search_result_filtered">
+        {% if search_result %}
+          {% for product in search_result %}
+            <div class="col-md-4 col-sm-6">
+              <div class="card product-card border-0 shadow-sm h-100 hover-shadow rounded-4 transition-all">
+                <div class="position-relative overflow-hidden rounded-top bg-light" style="height: 320px; display: flex; align-items: center; justify-content: center;">
+                  <a href="{% url 'apps.main:single_product' product.id %}" class="w-100 h-100 d-flex align-items-center justify-content-center">
+                    {% if product.productimagesfiles_set.all %}
+                      {% for product_img in product.productimagesfiles_set.all|slice:":1" %}
+                        <img class="img-fluid" src="{{ product_img.image_file.url }}" alt="{{ product.title }}" style="max-height: 100%; object-fit: contain;">
+                      {% endfor %}
+                    {% else %}
+                      {% for product_img in product.productimagesurl_set.all|slice:":1" %}
+                        <img class="img-fluid" src="{{ product_img.image_url }}" alt="{{ product.title }}" style="max-height: 100%; object-fit: contain;">
+                      {% endfor %}
+                    {% endif %}
+                  </a>
+                  <button class="btn-wishlist btn-sm position-absolute top-0 end-0 m-2 rounded-circle bg-white shadow" type="button" data-bs-toggle="tooltip" title="Add to wishlist"><i class="ci-heart text-danger"></i></button>
+                </div>
+
+                <div class="card-body text-center px-3 py-4">
+                  <span class="d-block text-muted small mb-1">{{ product.category }}</span>
+                  <h3 class="product-title fs-6 mb-2">
+                    <a href="{% url 'apps.main:single_product' product.id %}" class="text-dark text-decoration-none">{{ product.title|truncatechars:50 }}</a>
+                  </h3>
+                  <div class="d-flex justify-content-center align-items-center gap-2 mb-2">
+                    <div class="product-price h5 text-success mb-0">${{ product.market_price }}</div>
+                  </div>
+                  <div class="star-rating small">
+                    <i class="ci-star-filled active text-warning"></i>
+                    <i class="ci-star-filled active text-warning"></i>
+                    <i class="ci-star-filled active text-warning"></i>
+                    <i class="ci-star-filled active text-warning"></i>
+                    <i class="ci-star text-muted"></i>
+                  </div>
+                </div>
+
+                <div class="card-footer bg-white border-top-0 px-3 pb-4">
+                  <a href="{% url 'apps.cart:addtocart' product.id %}" class="btn btn-outline-primary btn-sm w-100 rounded-pill">
+                    <i class="ci-cart me-2"></i> Add to Cart
+                  </a>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        {% else %}
+          <div class="col-12">
+            <div class="alert alert-warning text-center mt-4 shadow-sm">No results found for "<strong>{{ keyword }}</strong>". Try another search.</div>
+          </div>
+        {% endif %}
+      </div>
+
+      <!-- Pagination -->
+      {% if search_result.has_other_pages %}
+      <nav class="pt-4 d-flex justify-content-center" aria-label="Pagination">
+        <ul class="pagination pagination-sm rounded-pill shadow-sm">
+          {% if search_result.has_previous %}
+            <li class="page-item"><a class="page-link" href="?page={{ search_result.previous_page_number }}"><i class="ci-arrow-left me-1"></i> Prev</a></li>
+          {% endif %}
+
+          {% for num in search_result.paginator.page_range %}
+            {% if search_result.number == num %}
+              <li class="page-item active"><span class="page-link bg-primary border-primary">{{ num }}</span></li>
+            {% elif num > search_result.number|add:"-3" and num < search_result.number|add:"3" %}
+              <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+            {% endif %}
+          {% endfor %}
+
+          {% if search_result.has_next %}
+            <li class="page-item"><a class="page-link" href="?page={{ search_result.next_page_number }}">Next <i class="ci-arrow-right ms-1"></i></a></li>
+          {% endif %}
+        </ul>
+      </nav>
+      {% endif %}
+    </section>
+  </div>
+</div>
+
+{% endblock %}

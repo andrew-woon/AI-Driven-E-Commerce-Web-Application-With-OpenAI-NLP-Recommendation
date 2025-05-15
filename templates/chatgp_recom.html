@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<form method="post" id="recommendationForm">
+    {% csrf_token %}
+    <div class="row justify-content-center py-5">
+        <div class="col-md-8 text-center">
+            <h2 class="fw-bold mb-3">Find Your Recommended Products</h2>
+            <input type="text" name="user_input" id="userInput" class="form-control form-control-lg mb-3" placeholder="e.g., leather shoes for men, kids jackets, formal wear...">
+            <button type="submit" class="btn btn-primary btn-lg">
+                <span id="btnText">Get Recommendations</span>
+                <span id="btnSpinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+</form>
+{% if ai_raw_response %}
+    <div class="alert alert-info text-center">
+        <strong>AI Recommendation JSON:</strong><br>
+        <pre>{{ ai_raw_response|safe }}</pre>
+    </div>
+{% endif %}
+
+<section class="container py-5 {% if ai_recommendation %}{% else %}d-none{% endif %}" id="recommended-products">
+    <div class="text-center mb-4">
+        <h2 class="fw-bold">{{ ai_gender }} Products</h2>
+    </div>
+
+    <div class="row g-4">
+        {% for p in product_list %}
+            {% if p.match_count >= 2 %}
+                <div class="col-lg-3 col-md-4 col-sm-6 recommended-product-item">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <a href="{% url 'apps.main:single_product' p.id %}">
+                            {% if p.productimagesfiles_set.all %}
+                                {% for product_img in p.productimagesfiles_set.all|slice:":1" %}
+                                    <img src="{{ product_img.image_file.url }}" class="card-img-top" alt="Product">
+                                {% endfor %}
+                            {% else %}
+                                {% for product_img in p.productimagesurl_set.all|slice:":1" %}
+                                    <img src="{{ product_img.image_url }}" class="card-img-top" alt="Product">
+                                {% endfor %}
+                            {% endif %}
+                        </a>
+                        <div class="card-body text-center">
+                            <h6 class="card-title">{{ p.title }}</h6>
+                            <p class="text-accent mb-2">${{ p.market_price }}</p>
+                            <a href="{% url 'apps.main:single_product' p.id %}" class="btn btn-sm btn-outline-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
+
+
+
+<script>
+    document.getElementById('recommendationForm').addEventListener('submit', function() {
+        document.getElementById('btnText').classList.add('d-none');
+        document.getElementById('btnSpinner').classList.remove('d-none');
+    });
+</script>
+
+{% endblock %}

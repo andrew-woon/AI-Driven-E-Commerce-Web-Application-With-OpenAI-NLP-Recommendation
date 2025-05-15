@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- Page Title -->
+<div class="page-title-overlap bg-dark pt-4 pb-3 shadow-sm">
+  <div class="container d-lg-flex justify-content-between align-items-center">
+      <h1 class="h4 text-light mb-0">My Orders</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container py-5">
+  <div class="row">
+    <!-- Sidebar -->
+    <aside class="col-lg-4 pt-4 pt-lg-0 pe-xl-4"style="margin-top:50px;">
+      <div class="bg-white rounded-3 shadow-sm overflow-hidden mb-5">
+        <div class="d-flex p-4 align-items-center bg-light">
+          <img src="{{ profile.image.url }}" class="rounded-circle me-3 border shadow-sm" width="70" alt="User">
+          <div>
+            <h6 class="mb-1 fw-semibold">{{ user.first_name }} {{ user.last_name }}</h6>
+            <small class="text-muted">{{ user.email }}</small>
+          </div>
+        </div>
+        <div class="px-4 py-3 border-top">
+          <h6 class="text-muted text-uppercase mb-2">Account Settings</h6>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><a class="nav-link d-flex align-items-center py-2" href="{% url 'apps.accounts:profile' %}"><i class="ci-user me-2"></i>Profile Info</a></li>
+          <li class="list-group-item"><a class="nav-link d-flex align-items-center py-2" href="{% url 'apps.accounts:address' %}"><i class="ci-location me-2"></i>Address</a></li>
+          <li class="list-group-item"><a class="nav-link d-flex align-items-center py-2" href="{% url 'apps.accounts:orders' %}"><i class="ci-bag me-2"></i>Orders</a></li>
+          <li class="list-group-item d-lg-none"><a class="nav-link d-flex align-items-center py-2" href="{% url 'apps.accounts:signout' %}"><i class="ci-sign-out me-2"></i>Sign Out</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <section class="col-lg-8" style="margin-top:50px;">
+      <div class="card shadow-sm border-0">
+        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+          <h5 class="mb-0">Order Details - #ORDER_{{ order.id }}</h5>
+        </div>
+        <div class="card-body">
+          {% for cp in order.cart.cartproduct_set.all %}
+          <div class="d-flex flex-column flex-md-row justify-content-between align-items-center border-bottom pb-3 mb-3">
+            <div class="d-flex align-items-center mb-3 mb-md-0">
+              <a href="{% url 'apps.main:single_product' cp.product.id %}" class="me-3">
+                {% if cp.product.productimagesfiles_set.all %}
+                  {% for product_img in cp.product.productimagesfiles_set.all|slice:":1" %}
+                    <img src="{{ product_img.image_file.url }}" class="rounded shadow-sm" width="100" alt="Product">
+                  {% endfor %}
+                {% else %}
+                  {% for product_img in cp.product.productimagesurl_set.all|slice:":1" %}
+                    <img src="{{ product_img.image_url }}" class="rounded shadow-sm" width="100" alt="Product">
+                  {% endfor %}
+                {% endif %}
+              </a>
+              <div>
+                <h6 class="fw-semibold mb-1"><a href="{% url 'apps.main:single_product' cp.product.id %}" class="text-dark text-decoration-none">{{ cp.product.title }}</a></h6>
+                <div class="text-muted">Price: ${{ cp.rate }}</div>
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="text-muted">Quantity</div>
+              <div class="fw-semibold">{{ cp.quantity }}</div>
+            </div>
+            <div class="text-center">
+              <div class="text-muted">Subtotal</div>
+              <div class="fw-semibold">${{ cp.subtotal }}</div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="card-footer d-flex justify-content-end flex-wrap gap-4 bg-light">
+          <div class="text-muted">Subtotal: <strong>${{ order.subtotal }}</strong></div>
+          <div class="text-muted">Shipping: <strong>$0</strong></div>
+          <div class="text-muted">Tax: <strong>$0</strong></div>
+          <div class="fw-bold">Total: <span class="text-success">${{ order.total }}</span></div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+{% endblock %}

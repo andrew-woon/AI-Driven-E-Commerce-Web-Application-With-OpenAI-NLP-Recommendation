@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container py-4">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <div class="card shadow-sm border-0">
+        <div class="card-body p-3 p-lg-4">
+          <h2 class="h4 text-center mb-3">Seller Login</h2>
+          <p class="text-muted text-center mb-3">Log in to access your seller dashboard</p>
+          <form method="POST" class="needs-validation" onsubmit="return validName()" novalidate>
+            {% csrf_token %}
+            <div class="mb-3">
+              <label class="form-label small mb-1" for="seller-username">Username</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="ci-user"></i></span>
+                <input class="form-control form-control-sm" type="text" name="username" id="seller-username" placeholder="Username" required>
+              </div>
+              <span id="message-username" class="text-danger small"></span>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small mb-1" for="seller-password">Password</label>
+              <div class="password-toggle">
+                <input class="form-control form-control-sm" type="password" name="password" id="seller-password" placeholder="Password" required>
+                <label class="password-toggle-btn" aria-label="Show/hide password">
+                  <input class="password-toggle-check" type="checkbox">
+                  <span class="password-toggle-indicator"></span>
+                </label>
+              </div>
+              <span id="message-password" class="text-danger small"></span>
+            </div>
+            <div class="d-flex flex-wrap justify-content-between mb-3">
+              <div class="form-check small">
+                <input class="form-check-input" type="checkbox" checked id="remember_seller">
+                <label class="form-check-label" for="remember_seller">Remember me</label>
+              </div>
+              <a class="nav-link-inline fs-sm" href="#">Forgot password?</a>
+            </div>
+            <div class="d-grid">
+              <button class="btn btn-primary btn-sm" type="submit">
+                <i class="ci-sign-in me-2"></i>Sign In
+              </button>
+            </div>
+          </form>
+          <p class="text-center mt-3 mb-0 small">
+            Don't have a seller account? <a href="{% url 'apps.seller_accounts:signup' %}">Sign up</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

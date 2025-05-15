@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- Centered Container -->
+<div class="container py-4 py-lg-5 my-4">
+    <div class="row justify-content-center">
+        <div class="col-md-10 col-lg-8">
+            <div class="card border-0 shadow">
+                <div class="card-body p-4 p-md-5">
+                    <h2 class="h4 mb-3">Checkout - Profile Info</h2>
+                    <p class="fs-sm text-muted mb-4">Please provide your profile information to proceed with checkout.</p>
+
+                    <!-- Form Start -->
+                    <form method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
+                        {% csrf_token %}
+                        <div class="row gx-4 gy-3">
+                            {% if profile.image %}
+                            <div class="col-12 text-center mb-4">
+                                <img class="rounded-circle shadow-sm" src="{{ profile.image.url }}" width="120" alt="{{ user.first_name }} {{ user.last_name }}">
+                            </div>
+                            {% endif %}
+                            <div class="col-sm-6">
+                                <label class="form-label" for="account-fn">First Name</label>
+                                <input class="form-control" type="text" id="account-fn" name="firstname" value="{{ user.first_name }}" required>
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="form-label" for="account-ln">Last Name</label>
+                                <input class="form-control" type="text" id="account-ln" name="lastname" value="{{ user.last_name }}" required>
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="form-label" for="account-email">Email Address</label>
+                                <input class="form-control" type="email" id="account-email" name="emailadd" value="{{ user.email }}" required>
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="form-label" for="account-phone">Phone Number</label>
+                                <input class="form-control" type="text" id="account-phone" name="phoneno" value="{{ profile.mob_no }}" required>
+                            </div>
+                            <div class="col-sm-12">
+                                <label class="form-label" for="checkout-gender">Gender</label>
+                                <select class="form-select" id="checkout-gender" name="gender">
+                                    <option value="{{ profile.gender }}">Choose Gender</option>
+                                    <option value="M">Men</option>
+                                    <option value="W">Women</option>
+                                    <option value="k">Kids</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Profile Picture</label>
+                                <input type="file" class="form-control" name="img" accept="image/*">
+                            </div>
+                            <div class="col-12 text-end pt-3">
+                                <button class="btn btn-primary" type="submit"><i class="ci-check me-2"></i>Update Profile</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- Form End -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

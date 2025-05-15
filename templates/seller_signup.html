@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container py-4">
+  <div class="row justify-content-center">
+    <div class="col-md-10 col-lg-8">
+      <div class="card shadow-sm border-0">
+        <div class="card-body p-4">
+          <h2 class="h4 text-center mb-4">Seller Sign Up</h2>
+          <div class="steps steps-dark d-flex justify-content-center mb-4">
+            <a class="step-item active current" href="#">
+              <div class="step-progress"><span class="step-count">1</span></div>
+              <div class="step-label"><i class="ci-add-user"></i> Register</div>
+            </a>
+            <div class="step-item disabled">
+              <div class="step-progress"><span class="step-count">2</span></div>
+              <div class="step-label"><i class="ci-briefcase"></i> Company</div>
+            </div>
+            <div class="step-item disabled">
+              <div class="step-progress"><span class="step-count">3</span></div>
+              <div class="step-label"><i class="ci-location"></i> Address</div>
+            </div>
+          </div>
+
+          <form method="POST" name="signupForm" novalidate onsubmit="return validName()">
+            {% csrf_token %}
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label small" for="reg-fn">First Name</label>
+                <input class="form-control form-control-sm" type="text" name="firstname" id="reg-fn" required>
+                <span id="message-firstname" class="text-danger small"></span>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small" for="reg-ln">Last Name</label>
+                <input class="form-control form-control-sm" type="text" name="lastname" id="reg-ln" required>
+                <span id="message-lastname" class="text-danger small"></span>
+              </div>
+              <div class="col-12">
+                <label class="form-label small" for="reg-username">Username</label>
+                <input class="form-control form-control-sm" type="text" name="username" id="reg-username" required>
+                <span id="message-username" class="text-danger small"></span>
+              </div>
+              <div class="col-12">
+                <label class="form-label small" for="reg-email">Email</label>
+                <input class="form-control form-control-sm" type="email" name="email" id="reg-email" required>
+                <span id="message-email" class="text-danger small"></span>
+              </div>
+              <div class="col-12">
+                <label class="form-label small" for="reg-password">Password</label>
+                <div class="password-toggle">
+                  <input class="form-control form-control-sm" name="password" type="password" id="reg-password" required>
+                  <label class="password-toggle-btn" aria-label="Show/hide password">
+                    <input class="password-toggle-check" type="checkbox">
+                    <span class="password-toggle-indicator"></span>
+                  </label>
+                </div>
+                <div class="form-text text-muted small">Must be 8–15 characters long</div>
+              </div>
+              <div class="col-12">
+                <label class="form-label small" for="reg-cfpassword">Confirm Password</label>
+                <div class="password-toggle">
+                  <input class="form-control form-control-sm" type="password" name="cfpassword" id="reg-cfpassword" required>
+                  <label class="password-toggle-btn" aria-label="Show/hide password">
+                    <input class="password-toggle-check" type="checkbox">
+                    <span class="password-toggle-indicator"></span>
+                  </label>
+                </div>
+                <span id="message-password" class="text-danger small"></span>
+              </div>
+              <div class="col-12 text-center mt-3">
+                <button class="btn btn-primary btn-sm" type="submit">
+                  <i class="ci-user me-2"></i>Continue to Company Details
+                </button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

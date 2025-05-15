@@ -1,0 +1,107 @@
+{% extends 'side_bar_seller.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Page Header -->
+<div class="page-title-overlap bg-dark pt-4 pb-3 shadow-sm mb-4">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div>
+      <h3 class="text-light mb-0 fs-sm">Product Management Panel</h3>
+    </div>
+  </div>
+</div>
+
+<!-- Product Management Section -->
+<div class="container mb-5 pb-3" style="margin-top:30px;">
+  <div class="bg-white shadow-lg rounded-3">
+    <div class="row">
+      <section class="col-lg-12 pt-4 px-4 pb-4">
+
+        <!-- Top Bar -->
+        <div class="border-bottom pb-3 mb-3">
+          <h2 class="h4">Your Products <span class="badge bg-secondary text-light">{{ sale_no_products }}</span></h2>
+        </div>
+
+        <!-- Search Bar -->
+        <form method="POST" action="{% url 'apps.seller_accounts:companyproducts' %}" class="input-group mb-4">
+          {% csrf_token %}
+          <input type="text" name="product_name" class="form-control" placeholder="Search for products" required>
+          <button type="submit" class="btn btn-outline-dark"><i class="ci-search"></i></button>
+        </form>
+
+        <!-- Product Listings -->
+        {% for sale in sale %}
+        <div class="d-md-flex align-items-center justify-content-between py-4 border-bottom">
+          <a href="{% url 'apps.main:single_product' sale.product.id %}" class="d-block mb-3 mb-md-0 me-md-4" style="width: 200px;">
+            {% if sale.product.productimagesfiles_set.all %}
+              {% for img in sale.product.productimagesfiles_set.all|slice:":1" %}
+                <img src="{{ img.image_file.url }}" class="img-fluid rounded-3" alt="Product">
+              {% endfor %}
+            {% else %}
+              {% for img in sale.product.productimagesurl_set.all|slice:":1" %}
+                <img src="{{ img.image_url }}" class="img-fluid rounded-3" alt="Product">
+              {% endfor %}
+            {% endif %}
+          </a>
+
+          <div class="flex-grow-1 text-center text-md-start">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-2">
+                <li class="breadcrumb-item small"><a href="#">{{ sale.product.gender_cat }}</a></li>
+                <li class="breadcrumb-item small"><a href="#">{{ sale.product.sub_cat }}</a></li>
+                <li class="breadcrumb-item small"><a href="#">{{ sale.product.articel_type }}</a></li>
+              </ol>
+            </nav>
+            <h6 class="fw-semibold mb-2">
+              <a href="{% url 'apps.main:single_product' sale.product.id %}" class="text-decoration-none text-dark">{{ sale.product.title }}</a>
+            </h6>
+            <div class="text-accent fw-bold">${{ sale.product.market_price }}</div>
+            <div class="small text-muted mt-2">
+              Sales: <span class="fw-semibold">{{ sale.quantity }}</span> |
+              Earnings: <span class="fw-semibold">${{ sale.subtotal }}</span>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="d-flex justify-content-center justify-content-md-end mt-3 mt-md-0">
+            <a href="{% url 'apps.seller_accounts:edit_product' sale.product.id %}" class="btn btn-outline-info btn-sm me-2">
+              <i class="ci-edit"></i> Edit
+            </a>
+            <a href="{% url 'apps.seller_accounts:delete_product' sale.product.id %}" class="btn btn-outline-danger btn-sm">
+              <i class="ci-trash"></i> Delete
+            </a>
+          </div>
+        </div>
+        {% endfor %}
+
+        <!-- Pagination -->
+        <nav class="pt-4">
+          <ul class="pagination justify-content-center">
+            {% if sale.has_previous %}
+              <li class="page-item"><a class="page-link" href="?page={{ sale.previous_page_number }}"><i class="ci-arrow-left me-2"></i>Prev</a></li>
+            {% else %}
+              <li class="page-item disabled"><span class="page-link">Prev</span></li>
+            {% endif %}
+
+            {% for num in sale.paginator.page_range %}
+              {% if sale.number == num %}
+                <li class="page-item active"><span class="page-link">{{ num }}</span></li>
+              {% elif num > sale.number|add:"-2" and num < sale.number|add:"2" %}
+                <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+              {% endif %}
+            {% endfor %}
+
+            {% if sale.has_next %}
+              <li class="page-item"><a class="page-link" href="?page={{ sale.next_page_number }}">Next<i class="ci-arrow-right ms-2"></i></a></li>
+            {% else %}
+              <li class="page-item disabled"><span class="page-link">Next</span></li>
+            {% endif %}
+          </ul>
+        </nav>
+
+      </section>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

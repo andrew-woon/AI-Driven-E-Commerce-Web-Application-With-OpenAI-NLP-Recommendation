@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Product Recommendation{% endblock %}</title>
+  <meta name="description" content="Product Recommendation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'main/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'main/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'main/favicon-16x16.png' %}">
+  <link rel="manifest" href="{% static 'main/site.webmanifest' %}">
+  <link rel="stylesheet" href="{% static 'vendor/simplebar/dist/simplebar.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/theme.min.css' %}">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+    }
+
+    aside {
+      width: 260px;
+      min-width: 260px;
+      max-width: 260px;
+      background-color: #111;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    .sidebar-section {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid #222;
+    }
+
+    .sidebar-section small,
+    .sidebar-section div {
+      color: #ccc;
+    }
+
+    .nav-link-style {
+      display: flex;
+      align-items: center;
+      color: #ddd;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .nav-link-style:hover,
+    .nav-link-style.active {
+      color: #fff;
+    }
+
+    .nav-link-style i {
+      margin-right: 0.75rem;
+      font-size: 1rem;
+      color: #888;
+    }
+
+    .nav-link-style:hover i {
+      color: #fff;
+    }
+
+    input.form-control,
+    button.btn {
+      color: #fff;
+      border-color: #444;
+    }
+
+    input.form-control::placeholder {
+      color: #aaa;
+    }
+
+    button.btn:hover {
+      background-color: #333;
+    }
+
+    main {
+      padding: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Layout Container -->
+  <div class="d-flex" style="min-height: 100vh;">
+
+    <!-- Sidebar -->
+    <aside>
+      <div class="d-flex flex-column h-100">
+
+        <!-- User Greeting -->
+        <div class="sidebar-section">
+          <small>Hello,</small>
+          <div class="fw-semibold text-truncate">{{ user.first_name }}</div>
+        </div>
+
+        <!-- Home Link -->
+        <div class="sidebar-section">
+          <a href="{% url 'apps.main:index' %}" class="nav-link-style">
+            <i class="ci-home"></i>Home
+          </a>
+        </div>
+
+        <!-- Search Form -->
+        <div class="sidebar-section">
+          <form method="POST" action="{% url 'apps.main:search_product' %}" class="d-flex">
+            {% csrf_token %}
+            <input class="form-control" style="background-color: #222;" me-2" name="keyword" type="text" placeholder="Search..." />
+            <button class="btn btn-outline-secondary" style="margin-left:10px;" type="submit"><i class="ci-search"></i></button>
+          </form>
+        </div>
+
+        <!-- Sidebar Navigation -->
+        <ul class="list-unstyled flex-grow-1 mb-0">
+          <li><a href="{% url 'apps.seller_accounts:profile' %}" class="nav-link-style"><i class="ci-user-circle"></i>Profile</a></li>
+          <li><a href="{% url 'apps.seller_accounts:companyinfo' %}" class="nav-link-style"><i class="ci-briefcase"></i>Company Info</a></li>
+          <li><a href="{% url 'apps.seller_accounts:sellerorders' %}" class="nav-link-style"><i class="ci-dollar"></i>Orders</a></li>
+          <li><a href="{% url 'apps.seller_accounts:companyproducts' %}" class="nav-link-style"><i class="ci-package"></i>Products</a></li>
+          <li><a href="{% url 'apps.seller_accounts:add_new_product' %}" class="nav-link-style"><i class="ci-cloud-upload"></i>Add Product</a></li>
+          <li><a href="{% url 'apps.seller_accounts:signout' %}" class="nav-link-style"><i class="ci-sign-out"></i>Sign Out</a></li>
+        </ul>
+
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-grow-1 bg-white">
+      {% block content %}{% endblock %}
+    </main>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="{% static 'vendor/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'js/theme.min.js' %}"></script>
+</body>
+
+</html>

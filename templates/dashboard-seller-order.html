@@ -1,0 +1,116 @@
+{% extends 'side_bar_seller.html' %}
+{% load static %} 
+{% block content %}
+
+<!-- Page Header -->
+<div class="page-title-overlap bg-dark pt-4 pb-3 mb-4 shadow-sm">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div>
+      <h3 class="text-light opacity-75 mb-0 fs-sm">Order Management Panel</h3>
+    </div>
+  </div>
+</div>
+
+<!-- Order Details Section -->
+  <div class="bg-white shadow-lg rounded-3 overflow-hidden" style="margin-top:30px;">
+    <div class="row g-0">
+      <section class="col-lg-8 p-4">
+        <div class="modal-content border-0 shadow-sm p-4">
+          <div class="modal-header border-0 pb-3">
+            <h5 class="mb-0 fw-bold">Order No - #ORDER_{{ order.id }}</h5>
+            <form method="POST" class="ms-auto" id="edit-status">
+              {% csrf_token %}
+              <select class="form-select form-select-sm" name="status" onchange="this.form.submit()">
+                <option value="{{order.order_status}}" selected>{{ order.order_status }}</option>
+                <option value="On the way">On the way</option>
+                <option value="Order Canceled">Order Canceled</option>
+                <option value="Order Completed">Order Completed</option>
+              </select>
+            </form>
+          </div>
+
+          <!-- Customer Info -->
+          <div class="card mb-4 border-0 bg-light">
+            <div class="card-body">
+              <ul class="list-unstyled mb-0">
+                <li class="d-flex align-items-start mb-3">
+                  <i class="ci-user text-primary fs-5 me-3"></i>
+                  <div>
+                    <strong>{{ order.ordered_by }}</strong>
+                  </div>
+                </li>
+                <li class="d-flex align-items-start mb-3">
+                  <i class="ci-phone text-primary fs-5 me-3"></i>
+                  <div>
+                    <small class="text-muted">Mobile:</small><br>
+                    <a href="tel:{{ order.mob_no }}" class="text-dark text-decoration-none">{{ order.mob_no }}</a>
+                  </div>
+                </li>
+                <li class="d-flex align-items-start mb-3">
+                  <i class="ci-mail text-primary fs-5 me-3"></i>
+                  <div>
+                    <small class="text-muted">Email:</small><br>
+                    <a href="mailto:{{ order.email }}" class="text-dark text-decoration-none">{{ order.email }}</a>
+                  </div>
+                </li>
+                <li class="d-flex align-items-start">
+                  <i class="ci-location text-primary fs-5 me-3"></i>
+                  <div>
+                    <small class="text-muted">Address:</small><br>
+                    <span class="text-dark">{{ order.shipping_address }}</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Products List -->
+          <div class="modal-body pt-0">
+            {% for cp in order.cart.cartproduct_set.all %}
+              {% if cp.product in product %}
+              <div class="d-flex align-items-center border-bottom pb-4 mb-4">
+                <a href="{% url 'apps.main:single_product' cp.product.id %}" class="me-4 d-block" style="width: 120px;">
+                  {% if cp.product.productimagesfiles_set.all %}
+                    {% for img in cp.product.productimagesfiles_set.all|slice:":1" %}
+                      <img src="{{ img.image_file.url }}" class="img-fluid rounded" alt="Product">
+                    {% endfor %}
+                  {% else %}
+                    {% for img in cp.product.productimagesurl_set.all|slice:":1" %}
+                      <img src="{{ img.image_url }}" class="img-fluid rounded" alt="Product">
+                    {% endfor %}
+                  {% endif %}
+                </a>
+                <div class="flex-grow-1">
+                  <h6 class="fw-semibold mb-1">
+                    <a href="{% url 'apps.main:single_product' cp.product.id %}" class="text-decoration-none text-dark">{{ cp.product.title }}</a>
+                  </h6>
+                  <div class="text-muted small">Size: 8.5 | Color: White & Blue</div>
+                  <div class="fw-semibold text-accent mt-2">${{ cp.rate }}</div>
+                </div>
+                <div class="text-center px-3">
+                  <div class="text-muted small">Qty</div>
+                  <div>{{ cp.quantity }}</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-muted small">Subtotal</div>
+                  <div class="fw-semibold">${{ cp.subtotal }}</div>
+                </div>
+              </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+
+          <!-- Totals -->
+          <div class="modal-footer bg-secondary justify-content-between">
+            <div><small class="text-white-50">Subtotal:</small> ${{ order.subtotal }}</div>
+            <div><small class="text-white-50">Shipping:</small> $0</div>
+            <div><small class="text-white-50">Tax:</small> $0</div>
+            <div class="fw-bold fs-5">Total: ${{ order.total }}</div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

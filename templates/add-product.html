@@ -1,0 +1,185 @@
+{% extends 'side_bar_seller.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Page Header -->
+<div class="page-title-overlap bg-dark pt-4 pb-3 mb-4 shadow-sm">
+  <div class="container d-flex justify-content-between align-items-center">
+    <h3 class="text-light opacity-75 mb-0 fs-sm">Product Management Panel</h3>
+  </div>
+</div>
+
+<!-- Add Product Section -->
+<div class="container mb-5 pb-3" style="margin-top:10px;">
+  <div class="bg-white shadow-lg rounded-3 overflow-hidden">
+    <div class="row">
+      <section class="col-lg-10 offset-lg-1 pt-4 pb-5 px-4 px-lg-5">
+        <!-- Tabs -->
+        <ul class="nav nav-tabs nav-fill mb-4" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" href="#single" data-bs-toggle="tab" role="tab">
+              <i class="ci-package me-2"></i>Add Single Product
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#bulk" data-bs-toggle="tab" role="tab">
+              <i class="ci-add-document me-2"></i>Upload Multiple Products
+            </a>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+          <!-- Single Product Tab -->
+          <div class="tab-pane fade show active" id="single" role="tabpanel">
+            <h4 class="mb-4">Add New Product</h4>
+            <form method="POST" action="{% url 'apps.seller_accounts:add_single_product' %}" enctype="multipart/form-data">
+              {% csrf_token %}
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label class="form-label">Product Name *</label>
+                  <input class="form-control" style= "color:black"type="text" name="product_name" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label class="form-label">Brand *</label>
+                  <input class="form-control" type="text" name="product_brand" required>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label class="form-label">Market Price *</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="ci-dollar"></i></span>
+                    <input class="form-control" type="text" name="product_market_price" required>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label class="form-label">Discount Price *</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="ci-dollar"></i></span>
+                    <input class="form-control" type="text" name="product_discount_price" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label class="form-label">Color *</label>
+                  <input class="form-control" type="text" name="product_color" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label class="form-label">Size *</label>
+                  <select class="form-select" name="product_size" required>
+                    <option value="" disabled selected>Select Size</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label class="form-label">Gender *</label>
+                  <select class="form-select" name="product_gender" required>
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="Men">Men</option>
+                    <option value="Women">Woman</option>
+                    <option value="Kids">Kids</option>
+                    <option value="Unisex">Unisex</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label class="form-label">Sub Category *</label>
+                  <select class="form-select" name="product_sub_cat" required>
+                    <option value="" disabled selected>Product Category</option>
+                    <option value="Accessories">Accessories</option>
+                    <option value="Footwear">Footwear</option>
+                    <option value="Tops">Tops</option>
+                    <option value="Outerwear">Outerwear</option>
+                    <option value="Bottoms">Bottoms</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Article Type</label>
+                <select class="form-select" type="text" name="product_articel_type" required>
+                    <option value="" disabled selected>Product Category</option>
+                    <option value="Casual Sneakers">Casual Sneakers</option>
+                    <option value="Jeans">Jeans</option>
+                    <option value="Cap">Cap</option>
+                    <option value="Shirt">Shirt</option>
+                    <option value="Plain Cotton T-shirt">Plain Cotton T-shirt</option>
+                    <option value="Running Sneakers">Running Sneakers</option>
+                    <option value="Smartwatch">Smartwatch</option>
+                    <option value="Jacket">Jacket</option>
+                    <option value="Hoodie">Hoodie</option>
+                    <option value="Analog Watch">Analog Watch</option>
+                    <option value="Smartwatch">Smartwatch</option>
+                    <option value="Graphic T-shirt">Graphic T-shirt</option>
+                    <option value="Formal Shirt">Formal Shirt</option>
+                  </select>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Material</label>
+                <input class="form-control" type="text" name="product_material">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Description *</label>
+                <textarea class="form-control" rows="5" name="product_desc" required></textarea>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Complete Look <span class="text-muted">(Optional)</span></label>
+                <textarea class="form-control" rows="4" name="product_complete_look"></textarea>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Upload Product Image</label>
+                <div class="file-drop-area border rounded p-4 text-center bg-light">
+                  <div class="mb-2"><i class="ci-cloud-upload fs-2 text-muted"></i></div>
+                  <span class="file-drop-message text-muted">Drag & drop images here or click to upload</span>
+                  <input class="file-drop-input" type="file" accept="image/*" name="product_img" multiple required>
+                  <div class="form-text mt-2">Ideal resolution: 1000x800px for HD display</div>
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <label class="form-label">Image URLs <span class="text-muted">(Optional)</span></label>
+                <textarea class="form-control" rows="3" name="product_img_urls" placeholder="Separate URLs with ' | '"></textarea>
+              </div>
+
+              <button class="btn btn-primary w-100" type="submit">
+                <i class="ci-cloud-upload me-2"></i>Upload Product
+              </button>
+            </form>
+          </div>
+
+          <!-- Multiple Product Upload Tab -->
+          <div class="tab-pane fade" id="bulk" role="tabpanel">
+            <h4 class="mb-4">Upload Products via File</h4>
+            <form method="POST" action="{% url 'apps.seller_accounts:add_multiple_products' %}" enctype="multipart/form-data">
+              {% csrf_token %}
+              <div class="mb-3">
+                <label class="form-label">Product File</label>
+                <input class="form-control" type="file" name="multi_product_file" required>
+                <div class="form-text">Max file size: 1GB. Upload CSV/Excel with proper structure.</div>
+              </div>
+              <button class="btn btn-primary w-100" type="submit">
+                <i class="ci-cloud-upload me-2"></i>Upload Products
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

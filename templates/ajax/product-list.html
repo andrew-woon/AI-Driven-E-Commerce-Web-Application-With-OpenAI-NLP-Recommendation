@@ -1,0 +1,40 @@
+{% for product in product_list %}
+            <div class="col-md-4 col-sm-6 px-2 mb-4">
+              <div class="card product-card">
+                <button class="btn-wishlist btn-sm" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="ci-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="{% url 'apps.main:single_product' product.id  %}">
+                <div style="height:300px">
+                  {% if product.productimagesfiles_set.all %}
+                      {% for product_img in product.productimagesfiles_set.all|slice:":1" %}
+                        <img src="{{product_img.image_file.url}}" alt="Product">
+                      {%endfor%}
+                    {%else%}
+                      {% for product_img in product.productimagesurl_set.all|slice:":1" %}
+                        <img src="{{product_img.image_url}}" alt="Product">
+                      {%endfor%}
+                    {% endif %}
+                </div>
+                </a>
+                <div class="card-body py-2"><a class="product-meta d-block fs-xs pb-1" href="#">{{product.category}}</a>
+                  <h3 class="product-title fs-sm"><a href="{% url 'apps.main:single_product' product.id  %}">{{product.title}}</a></h3>
+                  <div class="d-flex justify-content-between">
+                    <div class="product-price"><span class="text-accent">${{product.market_price}}</span></div>
+                    <div class="star-rating"><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body card-body-hidden">
+                    
+                    {% if user.is_staff %}
+                    <button class="btn btn-primary btn-sm d-block w-100 mb-2 disabled" type="button"><i class="ci-cart fs-sm me-1"></i>Add to Cart</button>
+                    {% else %}
+                    <a href="{% url 'apps.cart:addtocart' product.id %}">
+                    <button class="btn btn-primary btn-sm d-block w-100 mb-2" type="button"><i class="ci-cart fs-sm me-1"></i>Add to Cart</button>
+                    </a>
+                    {% endif %}
+                    
+                  </div>
+                </div>
+              <hr class="d-sm-none">
+            </div>
+    {% endfor %}
+     

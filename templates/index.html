@@ -1,0 +1,244 @@
+    {% extends 'base.html' %}
+    {% load static %}
+    
+    {% block content %}
+    <!-- Hero slider-->
+    <section class="tns-carousel tns-controls-lg mb-4 mb-lg-5">
+        <div class="tns-carousel-inner" data-carousel-options="{&quot;mode&quot;: &quot;gallery&quot;, &quot;responsive&quot;: {&quot;0&quot;:{&quot;nav&quot;:true, &quot;controls&quot;: false},&quot;992&quot;:{&quot;nav&quot;:false, &quot;controls&quot;: true}}}">
+            <!-- Item-->
+            <div class="px-lg-5" style="background-color: #f5b1b0;">
+                <div class="d-lg-flex justify-content-between align-items-center ps-lg-4"><img class="d-block order-lg-2 me-lg-n5 flex-shrink-0" src="{% static 'img/home/hero-slider/02.jpg' %}" alt="Women Sportswear">
+                    <div class="position-relative mx-auto me-lg-n5 py-5 px-4 mb-lg-5 order-lg-1" style="max-width: 42rem; z-index: 10;">
+                        <div class="pb-lg-5 mb-lg-5 text-center text-lg-start text-lg-nowrap">
+                            <h3 class="h2 text-light fw-light pb-1 from-bottom">Hurry up! Limited time offer.</h3>
+                            <h2 class="text-light display-5 from-bottom delay-1">Women Sportswear Sale</h2>
+                            <p class="fs-lg text-light pb-3 from-bottom delay-2">Sneakers, Keds, Sweatshirts, Hoodies &amp; much more...</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Item-->
+            <div class="px-lg-5" style="background-color: #3aafd2;">
+                <div class="d-lg-flex justify-content-between align-items-center ps-lg-4"><img class="d-block order-lg-2 me-lg-n5 flex-shrink-0" src="{% static 'img/home/hero-slider/01.jpg' %}" alt="Summer Collection">
+                    <div class="position-relative mx-auto me-lg-n5 py-5 px-4 mb-lg-5 order-lg-1" style="max-width: 42rem; z-index: 10;">
+                        <div class="pb-lg-5 mb-lg-5 text-center text-lg-start text-lg-nowrap">
+                            <h3 class="h2 text-light fw-light pb-1 from-start">Has just arrived!</h3>
+                            <h2 class="text-light display-5 from-start delay-1">Huge Summer Collection</h2>
+                            <p class="fs-lg text-light pb-3 from-start delay-2">Swimwear, Tops, Shorts, Sunglasses &amp; much more...</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Item-->
+            <div class="px-lg-5" style="background-color: #eba170;">
+                <div class="d-lg-flex justify-content-between align-items-center ps-lg-4"><img class="d-block order-lg-2 me-lg-n5 flex-shrink-0" src="{% static 'img/home/hero-slider/03.jpg' %}" alt="Men Accessories">
+                    <div class="position-relative mx-auto me-lg-n5 py-5 px-4 mb-lg-5 order-lg-1" style="max-width: 42rem; z-index: 10;">
+                        <div class="pb-lg-5 mb-lg-5 text-center text-lg-start text-lg-nowrap">
+                            <h3 class="h2 text-light fw-light pb-1 from-top">Complete your look with</h3>
+                            <h2 class="text-light display-5 from-top delay-1">New Men's Accessories</h2>
+                            <p class="fs-lg text-light pb-3 from-top delay-2">Hats &amp; Caps, Sunglasses, Bags &amp; much more...</p>
+                           </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!-- Redesigned Content Layout -->
+<section class="container py-5">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold display-6">Shop by Category</h2>
+        <p class="text-muted">Browse our curated collections for Women, Men, and Kids</p>
+    </div>
+    <div class="row g-4">
+        <!-- Women Category Card -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="{% static 'img/home/categories/cat-lg02.jpg' %}" class="card-img-top" alt="For Women">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Women's Collection</h5>
+                    <p class="card-text">Stylish apparel and accessories curated for every woman.</p>
+                    <button class="btn btn-outline-primary" onclick="showCategory('women-products')">Show Products</button>
+                </div>
+            </div>
+        </div>
+        <!-- Men Category Card -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="{% static 'img/home/categories/cat-lg01.jpg' %}" class="card-img-top" alt="For Men">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Men's Collection</h5>
+                    <p class="card-text">Discover modern trends and timeless classics for men.</p>
+                    <button class="btn btn-outline-primary" onclick="showCategory('men-products')">Show Products</button>
+                </div>
+            </div>
+        </div>
+        <!-- Kids Category Card -->
+        <div class="col-lg-4 col-md-6 mx-auto">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="{% static 'img/home/categories/cat-lg03.jpg' %}" class="card-img-top" alt="For Kids">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Kids' Collection</h5>
+                    <p class="card-text">Fun, colorful, and comfy essentials for your little ones.</p>
+                    <button class="btn btn-outline-primary" onclick="showCategory('kids-products')">Show Products</button>
+                </div>
+            </div>
+        </div>
+                <!-- Unisex Category Card -->
+        <div class="col-lg-4 col-md-7 mx-auto">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="{% static 'img/home/categories/cat-lg04.png' %}" class="card-img-top" alt="For Kids">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Unisex Collection</h5>
+                    <p class="card-text">Versatile styles that work for everyone..</p>
+                    <button class="btn btn-outline-primary" onclick="showCategory('unisex-products')">Show Products</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Product Sections (Initially Hidden) -->
+<section class="container py-5 d-none" id="women-products">
+    <div class="text-center mb-4">
+        <h2 class="fw-bold">Women's Products</h2>
+    </div>
+    <div class="row g-4">
+        {% for p in product_list %}
+            {% if p.gender_cat == "Women" %}
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <a href="{% url 'apps.main:single_product' p.id %}">
+                        {% if p.productimagesfiles_set.all %}
+                            {% for product_img in p.productimagesfiles_set.all|slice:":1" %}
+                                <img src="{{ product_img.image_file.url }}" class="card-img-top" alt="Product">
+                            {% endfor %}
+                        {% else %}
+                            {% for product_img in p.productimagesurl_set.all|slice:":1" %}
+                                <img src="{{ product_img.image_url }}" class="card-img-top" alt="Product">
+                            {% endfor %}
+                        {% endif %}
+                    </a>
+                    <div class="card-body text-center">
+                        <h6 class="card-title">{{ p.title }}</h6>
+                        <p class="text-accent mb-2">${{ p.market_price }}</p>
+                        <a href="{% url 'apps.main:single_product' p.id %}" class="btn btn-sm btn-outline-primary">View</a>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
+<section class="container py-5 d-none" id="men-products">
+    <div class="text-center mb-4">
+        <h2 class="fw-bold">Men's Products</h2>
+    </div>
+    <div class="row g-4">
+        {% for p in product_list %}
+            {% if p.gender_cat == "Men" %}
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <a href="{% url 'apps.main:single_product' p.id %}">
+                        {% if p.productimagesfiles_set.all %}
+                            {% for product_img in p.productimagesfiles_set.all|slice:":1" %}
+                                <img src="{{ product_img.image_file.url }}" class="card-img-top" alt="Product">
+                            {% endfor %}
+                        {% else %}
+                            {% for product_img in p.productimagesurl_set.all|slice:":1" %}
+                                <img src="{{ product_img.image_url }}" class="card-img-top" alt="Product">
+                            {% endfor %}
+                        {% endif %}
+                    </a>
+                    <div class="card-body text-center">
+                        <h6 class="card-title">{{ p.title }}</h6>
+                        <p class="text-accent mb-2">${{ p.market_price }}</p>
+                        <a href="{% url 'apps.main:single_product' p.id %}" class="btn btn-sm btn-outline-primary">View</a>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
+
+<section class="container py-5 d-none" id="kids-products">
+    <div class="text-center mb-4">
+        <h2 class="fw-bold">Kids' Products</h2>
+    </div>
+    <div class="row g-4">
+        {% for p in product_list %}
+            {% if p.gender_cat == "Kids" %}
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <a href="{% url 'apps.main:single_product' p.id %}">
+                        {% if p.productimagesfiles_set.all %}
+                            {% for product_img in p.productimagesfiles_set.all|slice:":1" %}
+                                <img src="{{ product_img.image_file.url }}" class="card-img-top" alt="Product">
+                            {% endfor %}
+                        {% else %}
+                            {% for product_img in p.productimagesurl_set.all|slice:":1" %}
+                                <img src="{{ product_img.image_url }}" class="card-img-top" alt="Product">
+                            {% endfor %}
+                        {% endif %}
+                    </a>
+                    <div class="card-body text-center">
+                        <h6 class="card-title">{{ p.title }}</h6>
+                        <p class="text-accent mb-2">${{ p.market_price }}</p>
+                        <a href="{% url 'apps.main:single_product' p.id %}" class="btn btn-sm btn-outline-primary">View</a>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
+<section class="container py-5 d-none" id="unisex-products">
+    <div class="text-center mb-4">
+        <h2 class="fw-bold">Unisex Products</h2>
+    </div>
+    <div class="row g-4">
+        {% for p in product_list %}
+            {% if p.gender_cat == "Unisex" %}
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <a href="{% url 'apps.main:single_product' p.id %}">
+                        {% if p.productimagesfiles_set.all %}
+                            {% for product_img in p.productimagesfiles_set.all|slice:":1" %}
+                                <img src="{{ product_img.image_file.url }}" class="card-img-top" alt="Product">
+                            {% endfor %}
+                        {% else %}
+                            {% for product_img in p.productimagesurl_set.all|slice:":1" %}
+                                <img src="{{ product_img.image_url }}" class="card-img-top" alt="Product">
+                            {% endfor %}
+                        {% endif %}
+                    </a>
+                    <div class="card-body text-center">
+                        <h6 class="card-title">{{ p.title }}</h6>
+                        <p class="text-accent mb-2">${{ p.market_price }}</p>
+                        <a href="{% url 'apps.main:single_product' p.id %}" class="btn btn-sm btn-outline-primary">View</a>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
+
+<script>
+    function showCategory(categoryId) {
+        const sections = ['women-products', 'men-products', 'kids-products','unisex-products'];
+        sections.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) {
+                el.classList.add('d-none');
+            }
+        });
+        const activeSection = document.getElementById(categoryId);
+        if (activeSection) {
+            activeSection.classList.remove('d-none');
+            activeSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+</script>
+{% endblock %}

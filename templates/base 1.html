@@ -1,0 +1,226 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>{% block title%}Product Recommendation{% endblock %}</title>
+  <!-- SEO Meta Tags-->
+  <meta name="description" content=" Product Recommendation">
+  <meta name="keywords"
+    content="bootstrap, shop, e-commerce, market, modern, responsive,  business, mobile, bootstrap, html5, css3, js, gallery, slider, touch, creative, clean">
+  <meta name="author" content="DSE  Studio">
+  <!-- Viewport-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicon and Touch Icons-->
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'main/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'main/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'main/favicon-16x16.png' %}">
+  <link rel="manifest" href="{% static 'main/site.webmanifest' %}">
+  <link rel="mask-icon" color="#fe6a6a" href="{% static 'main/safari-pinned-tab.svg' %}">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Vendor Styles including: Font Icons, Plugins, etc.-->
+  <link rel="stylesheet" media="screen" href="{% static 'vendor/simplebar/dist/simplebar.min.css' %}" />
+  <link rel="stylesheet" media="screen" href="{% static 'vendor/tiny-slider/dist/tiny-slider.css' %}" />
+  <link rel="stylesheet" media="screen" href="{% static 'vendor/nouislider/distribute/nouislider.min.css' %}" />
+  <link rel="stylesheet" media="screen" href="{% static 'vendor/drift-zoom/dist/drift-basic.min.css' %}" />
+  <link rel="stylesheet" media="screen" href="{% static 'vendor/nouislider/distribute/nouislider.min.css' %}" />
+  <link rel="stylesheet" media="screen" href="{% static 'vendor/drift-zoom/dist/drift-basic.min.css' %}" />
+  <!-- Main Theme Styles + Bootstrap-->
+  <link rel="stylesheet" media="screen" href="{% static 'css/theme.min.css' %}">
+  <style>
+  input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+input[type=number] {
+  appearance: number;
+  -moz-appearance: textfield;
+}
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+ 
+  <!-- Navbar 3 Level (Light)-->
+  <header class="shadow-sm">
+    <!-- Topbar-->
+
+    <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
+    <div class="navbar-sticky bg-light">
+      <div class="navbar navbar-expand-lg navbar-light">
+        <div class="container"><a class="navbar-brand d-none d-sm-block flex-shrink-0" href="{% url 'apps.main:index' %}"><img
+              src="{% static 'img/logo-dark.png' %}" width="142" alt="eShop"></a><a
+            class="navbar-brand d-sm-none flex-shrink-0 me-2" href="home-marketplace.html"><img
+              src="{% static 'img/logo-icon.png' %}" width="74" alt="eShop"></a>
+          <form class="input-group d-none d-lg-flex flex-nowrap mx-4" method="POST" action="{% url 'apps.main:search_product' %}">
+          {% csrf_token %}
+          <div class="input-group d-none d-lg-flex mx-4">
+            <input class="form-control rounded-end pe-5" type="text" name = "keyword" placeholder="Search for products" required>
+            
+            <button type="submit" class="btn btn-outline-dark btn-icon">
+            <i class="ci-search"></i>
+            </button>
+          </div>
+          </form>
+
+          <div class="navbar-toolbar d-flex flex-shrink-0 align-items-center">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarCollapse"><span class="navbar-toggler-icon"></span></button>
+            <a class="navbar-tool navbar-stuck-toggler" href="#"><span class="navbar-tool-tooltip">Expand menu</span>
+              <div class="navbar-tool-icon-box"><i class="navbar-tool-icon ci-menu"></i></div>
+            </a>
+            
+            {% if user.is_authenticated %}
+              {% if user.is_staff %}
+                <div class="navbar-tool-icon-box"><a href="{% url 'apps.seller_accounts:profile'%}"><i class="navbar-tool-icon ci-user"></i></div>
+              {% else %}
+                <div class="navbar-tool-icon-box"><a href="{% url 'apps.accounts:profile'%}"><i class="navbar-tool-icon ci-user"></i></div>
+              {% endif %}
+            <div class="navbar-tool-text ms-n3"><small>Hello!!</small>{{user.first_name}}</div>
+            <a class="navbar-tool ms-1 ms-lg-0 me-n1 me-lg-2" href="{% url 'apps.accounts:signout' %}" data-bs-toggle="modal">
+              <button type="button" class="btn btn-sm btn-outline-primary ms-4">Logout</button>
+            </a>
+            {% else %}
+            <a class="navbar-tool ms-1 ms-lg-0 me-n1 me-lg-2" href="{% url 'apps.accounts:signin' %}" data-bs-toggle="modal">
+              <div class="navbar-tool-icon-box"><i class="navbar-tool-icon ci-user"></i></div>
+              <div class="navbar-tool-text ms-n3"><small>Hello, Sign in</small></div>
+            </a>
+            {% endif %}
+            {% if request.user.is_staff %}
+            {% comment %} <a class="nav-link" href="{% url 'apps.seller_accounts:companyproducts' %}"><i class="ci-view-list"></i> Products</a>
+             {% endcomment %}{% else %}
+            <div class="navbar-tool ms-3">
+            <a class="navbar-tool-icon-box bg-secondary dropdown-toggle" href="{% url 'apps.cart:mycart' %}">
+            <i class="navbar-tool-icon ci-cart"></i></a>
+            <a class="navbar-tool-text fw-bolder ms-n2" href="{% url 'apps.cart:mycart' %}"><small>My Cart</small></a>
+            {% endif %}
+                  </div>
+                  
+              <!-- Cart dropdown-->
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-expand-lg navbar-light navbar-stuck-menu mt-n2 pt-0 pb-2">
+        <div class="container">
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <!-- Search-->
+            
+            <form class="input-group d-lg-none d-flex flex-nowrap my-3" method="POST" action="{% url 'apps.main:search_product' %}">
+          {% csrf_token %}
+          <div class="input-group d-lg-none d-lg-flex">
+            <input class="form-control rounded-end pe-5" type="text" name = "keyword" placeholder="Search for products" required>
+            
+            <button type="submit" class="btn btn-outline-dark btn-icon">
+            <i class="ci-search"></i>
+            </button>
+          </div>
+          </form>
+           
+            <!-- Primary menu-->
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown {{Home}}"><a class="nav-link" href="{% url 'apps.main:index' %}">Home</a>
+                
+              </li>
+              <li class="nav-item dropdown {{Shop}}"><a class="nav-link" href="{% url 'apps.main:showallproducts' %}">Shop</a>
+                
+              </li>
+              <li class="nav-item dropdown {{Accounts}}"><a class="nav-link dropdown-toggle" href="#"
+                  data-bs-toggle="dropdown">Account</a>
+                <ul class="dropdown-menu">
+                {% if user.is_staff %}
+                                     
+                      <li><a class="dropdown-item" href="{% url 'apps.seller_accounts:profile' %}">Settings</a></li>
+                      <li><a class="dropdown-item" href="{% url 'apps.seller_accounts:sellerorders' %}">Orders</a></li>
+                      <li><a class="dropdown-item" href="{% url 'apps.seller_accounts:companyproducts' %}">Products</a></li>
+                      <li><a class="dropdown-item" href="{% url 'apps.seller_accounts:add_new_product' %}">Add New Product</a></li>                 {% else %}
+                                      <li><a class="dropdown-item" href="{% url 'apps.accounts:orders' %}">Orders History</a></li>
+                      <li><a class="dropdown-item" href="{% url 'apps.accounts:profile' %}">Profile Settings</a></li>
+                      <li><a class="dropdown-item" href="{% url 'apps.accounts:address' %}">Account Address</a></li>
+                                   
+                  {% endif %}
+                  {% if user.is_authenticated %}
+                  <li><a class="dropdown-item" href="{% url 'apps.accounts:signout' %}">Sign Out</a></li>
+                  {% else %}
+                  <li><a class="dropdown-item" href="{% url 'apps.accounts:signin' %}">Sign In / Sign Up</a></li>
+                  {% endif %}
+                  
+                </ul>
+              </li>
+              <li class="nav-item dropdown {{Contact}}"><a class="nav-link" href="{% url 'apps.main:contact' %}">Contact Us</a></li>
+              
+            </ul>
+            
+          
+      
+      
+                </div>
+          
+        </div>
+    </div>
+    </div>
+    
+  </header>
+
+{% block content %}
+
+{% endblock %}
+{% include 'messages.html' %}
+
+<footer class="bg-dark">
+    
+    <div class="pt-5 bg-darker">
+      <div class="container">
+        <hr class="hr-light mb-5">
+        <div class="row pb-2">
+          <div class="col-md-6 text-center text-md-start mb-4">
+            <div class="text-nowrap mb-4"><a class="d-inline-block align-middle mt-n1 me-3" href="#"><img
+                  class="d-block" src="{% static 'img/footer-logo-light.png' %}" width="117" alt="Cartzilla"></a>
+              
+            </div>
+            <div class="widget widget-links widget-light">
+              <ul class="widget-list d-flex flex-wrap justify-content-center justify-content-md-start">
+                <li class="widget-list-item me-4"><a class="widget-list-link" href="#">Outlets</a></li>
+                <li class="widget-list-item me-4"><a class="widget-list-link" href="#">Careers</a></li>
+                <li class="widget-list-item me-4"><a class="widget-list-link" href="{% url 'apps.main:contact' %}">Contact</a></li>
+                <li class="widget-list-item me-4"><a class="widget-list-link" href="#">Privacy</a></li>
+                <li class="widget-list-item me-4"><a class="widget-list-link" href="#">Terms of use</a></li>
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+        <div class="pb-4 fs-xs text-light opacity-50 text-center text-md-start">© All rights reserved. Made by <a
+            class="text-light" href="https://github.com/TwoPointerr" target="_blank" rel="noopener">TwoPointerr</a></div>
+      </div>
+    </div>
+  </footer>
+  <!-- Back To Top Button--><a class="btn-scroll-top" href="#top" data-scroll><span
+      class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span><i class="btn-scroll-top-icon ci-arrow-up">
+    </i></a>
+  <!-- Vendor scrits: js libraries and plugins-->
+  <script src="{% static 'vendor/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/simplebar/dist/simplebar.min.js' %}"></script>
+  <script src="{% static 'vendor/tiny-slider/dist/min/tiny-slider.js' %}"></script>
+  <script src="{% static 'vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js' %}"></script>
+  <script src="{% static 'vendor/nouislider/distribute/nouislider.min.js' %}"></script>
+  <script src="{% static 'vendor/drift-zoom/dist/Drift.min.js' %}"></script>
+  <!-- Main theme script-->
+  <script src="{% static 'js/theme.min.js' %}"></script>
+  <script src="{% static 'js/account.js' %}"></script>
+  <script src="{% static 'js/seller_account.js' %}"></script>
+  <script src="{% static 'js/product-filter.js' %}"></script>
+  <script src="{% static 'js/product-filter-search.js' %}"></script>
+
+
+</body>
+
+</html>

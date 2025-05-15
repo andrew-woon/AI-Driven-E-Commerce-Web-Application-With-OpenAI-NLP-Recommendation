@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- Page Title -->
+<div class="page-title-overlap bg-dark pt-4 pb-3 shadow-sm">
+  <div class="container d-lg-flex justify-content-between align-items-center">
+    <div class="order-lg-1 pe-lg-4 text-center text-lg-start">
+      <h1 class="h4 text-light mb-0">My Addresses</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container py-5">
+  <div class="row">
+    <!-- Sidebar -->
+    <aside class="col-lg-4 pt-4 pt-lg-0 pe-xl-4"style="margin-top:50px;">
+      <div class="bg-white rounded-3 shadow-sm overflow-hidden mb-5">
+        <div class="d-flex p-4 align-items-center bg-light">
+          <img src="{{ profile.image.url }}" class="rounded-circle me-3 border shadow-sm" width="70" alt="User">
+          <div>
+            <h6 class="mb-1 fw-semibold">{{ user.first_name }} {{ user.last_name }}</h6>
+            <small class="text-muted">{{ user.email }}</small>
+          </div>
+        </div>
+        <div class="px-4 py-3 border-top">
+          <h6 class="text-muted text-uppercase mb-2">Account Settings</h6>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><a class="nav-link d-flex align-items-center py-2" href="{% url 'apps.accounts:profile' %}"><i class="ci-user me-2"></i>Profile Info</a></li>
+          <li class="list-group-item active bg-primary text-white"><a class="nav-link d-flex align-items-center py-2 text-white" href="{% url 'apps.accounts:address' %}"><i class="ci-location me-2"></i>Address</a></li>
+          <li class="list-group-item"><a class="nav-link d-flex align-items-center py-2" href="{% url 'apps.accounts:orders' %}"><i class="ci-bag me-2"></i>Orders</a></li>
+          <li class="list-group-item d-lg-none"><a class="nav-link d-flex align-items-center py-2" href="{% url 'apps.accounts:signout' %}"><i class="ci-sign-out me-2"></i>Sign Out</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <section class="col-lg-8"style="margin-top:50px;">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h6 class="fs-base fw-semibold">List of your registered addresses:</h6>
+        <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#add-address"><i class="ci-add me-2"></i>Add New Address</button>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-hover border rounded">
+          <thead class="table-light">
+            <tr>
+              <th>Address</th>
+              <th class="text-center">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for add in address_list %} {% if add.profile_id == profile.id %}
+            <tr>
+              <td>{{ add.addline }}, {{ add.city }}, {{ add.state }} - {{ add.pincode }} {% if add.isprimary %}<span class="badge bg-info ms-2">Primary</span>{% endif %}</td>
+              <td class="text-center">
+                <a href="{% url 'apps.accounts:manageadd' add.id %}?action=edit&addid={{ add.id }}" class="btn btn-sm btn-outline-secondary me-2" data-bs-toggle="tooltip" title="Edit"><i class="ci-edit"></i></a>
+                {% if not add.isprimary %}
+                <a href="{% url 'apps.accounts:manageadd' add.id %}?action=rem&addid={{ add.id }}" class="btn btn-sm btn-outline-danger" data-bs-toggle="tooltip" title="Remove"><i class="ci-trash"></i></a>
+                {% endif %}
+              </td>
+            </tr>
+            {% endif %} {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- Add Address Modal -->
+<div class="modal fade" id="add-address" tabindex="-1" aria-labelledby="addAddressLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <form class="modal-content needs-validation" enctype="multipart/form-data" method="post" novalidate>
+      {% csrf_token %}
+      <div class="modal-header">
+        <h5 class="modal-title" id="addAddressLabel">Add a New Address</h5>
+        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-6 mb-3">
+            <label class="form-label" for="checkout-address-1">Address</label>
+            <input class="form-control" type="text" name="addline" id="checkout-address-1" required>
+          </div>
+          <div class="col-sm-6 mb-3">
+            <label class="form-label" for="checkout-city">City</label>
+            <input class="form-control" type="text" name="city" id="checkout-city" required>
+          </div>
+          <div class="col-sm-6 mb-3">
+            <label class="form-label" for="checkout-state">State</label>
+            <input class="form-control" type="text" name="state" id="checkout-state" required>
+          </div>
+          <div class="col-sm-6 mb-3">
+            <label class="form-label" for="checkout-zip">ZIP Code</label>
+            <input class="form-control" type="text" name="zipcode" id="checkout-zip" required>
+          </div>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="primary" id="address-primary">
+          <label class="form-check-label" for="address-primary">Make this address primary</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+        <button class="btn btn-primary btn-shadow" type="submit">Add Address</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
